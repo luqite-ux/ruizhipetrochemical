@@ -38,16 +38,16 @@ export const R2_FACILITY = [
 export const R2_CERTIFICATES = [
   {
     "id": "cert-work-safety-license",
-    "title": "Work Safety License (安全生产许可证)",
-    "code": "(苏)JZ安许证字[2022]004596",
+    "title": "Work Safety License",
+    "code": "JS-JZ-2022-004596",
     "holder": "Jiangsu Ruizhi Petrochemical Engineering Co., Ltd.",
-    "scope": "Construction Engineering (建筑施工)",
+    "scope": "Construction Engineering",
     "issuer": "Jiangsu Provincial Department of Housing and Urban-Rural Development",
     "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/certificates/work-safety-license-8d51748dea.jpg"
   },
   {
     "id": "cert-construction-qualification",
-    "title": "Construction Enterprise Qualification Certificate (建筑业企业资质证书)",
+    "title": "Construction Enterprise Qualification Certificate",
     "code": "D332462680",
     "holder": "Jiangsu Ruizhi Petrochemical Engineering Co., Ltd.",
     "scope": "Grade III General Contracting for Petrochemical Engineering Construction & Grade III General Contracting for Mechanical & Electrical Engineering Construction",
