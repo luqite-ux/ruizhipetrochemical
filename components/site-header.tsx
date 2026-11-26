@@ -26,8 +26,8 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-hairline bg-white/90 backdrop-blur-md">
-      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
-        <BrandLogo />
+      <div className="mx-auto flex h-[4.75rem] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8 lg:h-20">
+        <BrandLogo heightClass="h-14 sm:h-16 lg:h-[4.25rem]" />
 
         <nav aria-label="Primary" className="hidden lg:block">
           <ul className="flex items-center gap-1">
@@ -41,7 +41,7 @@ export function SiteHeader() {
                     className={cn(
                       'relative rounded-md px-3 py-2 text-sm font-medium text-body transition-colors hover:text-navy',
                       active &&
-                        'text-navy after:absolute after:inset-x-3 after:-bottom-[1.05rem] after:h-0.5 after:bg-crimson',
+                        'text-navy after:absolute after:inset-x-3 after:-bottom-[1.3rem] after:h-0.5 after:bg-crimson',
                     )}
                   >
                     {item.label}

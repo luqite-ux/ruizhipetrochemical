@@ -7,7 +7,7 @@ interface BrandLogoProps {
   heightClass?: string
 }
 
-export function BrandLogo({ className, heightClass = 'h-11' }: BrandLogoProps) {
+export function BrandLogo({ className, heightClass = 'h-14 sm:h-16' }: BrandLogoProps) {
   return (
     <Link
       href="/"
