@@ -1,0 +1,70 @@
+# Jiangsu Ruizhi Petrochemical Engineering Co., Ltd. — Industrial Engineering Website
+
+## 1. Role & Visual Direction (STRICTLY LIGHT EDITORIAL + THREE.JS)
+Build a complete, high-craft Next.js 16 App Router English industrial website for **Jiangsu Ruizhi Petrochemical Engineering Co., Ltd.** (brand monogram: **RZ**), a direct source factory integrating **Design, Fabrication, and Site Installation** of petrochemical pressure vessels, storage tanks, heat exchangers, condensers, distillation columns, and reactors.
+
+**Aesthetic Reference & Palette (CRITICAL — NO DARK THEME / NO BLACK BACKGROUND):**
+- Inspired by the crisp, bright, high-precision light editorial aesthetic of **antigravity.google** and **openai.com/index/gpt-6-astra/**.
+- **Strictly light canvas**: Pure Porcelain White (`#FFFFFF`), Alabaster Surface (`#F7F9FC`), Cool Mist (`#EEF2F6`), Hairline Structural Borders (`#E2E8F0`), Deep Engineering Navy (`#1B3670` from the RZ logo), Precision Crimson Accent (`#D92027` from the RZ logo), Slate Ink (`#0F172A` headings, `#475569` body).
+- **NO dark-mode page backgrounds, NO black sections, NO glowing neon SaaS clichés, NO lifeless static CSS.**
+- Typography: Clean geometric sans-serif (`Inter` / `Plus Jakarta Sans`) for airy editorial headlines + `JetBrains Mono` for engineering parameters, pressures, volumes, and heat-transfer areas.
+
+## 2. Flexible Three.js Interactive 3D Engineering Showcase
+Include a signature **Light-Canvas Three.js 3D Petrochemical Equipment Cutaway Studio** (`three` / WebGL canvas on a bright architectural blueprint grid background `#F8FAFC`) directly on the Homepage (`sectionId="threejs-process-studio"`):
+- Buyers can switch live between 4 procedural PBR 3D engineering assemblies:
+  1. **Distillation Column (Tower)** — multi-tray vertical column with nozzles, platforms, and cutaway shell
+  2. **Shell-and-Tube Heat Exchanger** — flanged horizontal shell with helical-baffle tube bundle cutaway
+  3. **Agitated Pressure Reactor** — jacketed vertical reactor with top drive motor & internal impeller cutaway
+  4. **1,000 m³ Industrial Storage Tank** — vertical cylindrical tank with spiral staircase, roof railing & nozzles
+- Interactive controls: **Shell Cutaway Toggle**, **Auto-Orbit / 360° Drag**, **Engineering Spec Readout** (Design Pressure, Design Life 10 Years, Materials).
+- Performance & accessibility: Cap DPR at `Math.min(window.devicePixelRatio, 2)`, pause animation loop when offscreen via `IntersectionObserver`, and gracefully render a crisp static studio fallback under `prefers-reduced-motion`.
+- Also use clean, perceptible `IntersectionObserver` one-shot viewport reveals (24px subtle rise, 550ms ease-out, staggered 70ms cards, NEVER hiding content with permanent opacity-0 or global timeouts).
+
+## 3. Attached Real Customer Assets (Use ALL 3 Hero Banners & Real Logo)
+- **Logo & Favicon**: Use `01-logo.png` (RZ monogram + RUI ZHI SHI HUA GONG CHENG) with `object-fit: contain` in header & footer (linking to `/`) and configure `app/icon.png` from the RZ mark (zero v0/Next.js default icons).
+- **3-Slide Full-Width Adaptive Hero Carousel** (MUST use all 3 attached customer banners with per-slide safe-zone alignment — NO dark full-bleed mud overlay!):
+  - **Slide 1 (`02-banner-1.jpg`)**: Building on right, bright white-blue fade on LEFT → Place **dark navy/slate typography on LEFT**, CTA "Explore Equipment Catalog" → `/products`.
+  - **Slide 2 (`03-banner-2.jpg`)**: Heavy workshop vessels & engineers on left, deep navy fade on RIGHT → Place **crisp white typography on RIGHT**, CTA "Inspect Manufacturing Facility" → `/manufacturing`.
+  - **Slide 3 (`04-banner-3.jpg`)**: Petrochemical column cluster on right, bright white grid fade on LEFT → Place **dark navy/slate typography on LEFT**, CTA "View Project Case Studies" → `/projects`.
+  - On 390px mobile, render the banner image cleanly at top and stack the editorial headline + CTA in a crisp high-contrast panel below so zero text overlaps the equipment.
+- **Representative Products** (`05-prod-l1-condenser.jpg`, `06-prod-l3-helical-bundle.jpg`, `07-prod-108m-coking-tower.jpg`, `08-prod-storage-tanks.jpg`): Build scalable product catalog & detail templates supporting **all 7 categories** (Storage Tanks & Pressure Vessels, Reactors & Reaction Systems, Columns & Process Towers, Packaged Process Units, Heat Exchangers & Condensers, Environmental Water Treatment, Filtration Equipment). Full 27-product catalog will be connected to Supabase/R2 by Codex.
+- **Facility** (`09-factory-aerial.jpg`, `10-factory-workshop.jpg`): Showcase the 22,000 m² (33 mu) Xuyi manufacturing base and 50/10t overhead bridge crane workshop.
+- **Individual Certificates** (`11-cert-safety-license.jpg`, `12-cert-construction-qual.jpg`): Display **EACH certificate individually** in its own clean card with certificate title, number, scope, and click-to-zoom lightbox (Work Safety License `(苏)JZ安许证字[2022]004596` and Construction Enterprise Qualification Certificate `D332462680` — Grade III Petrochemical & Electromechanical General Contracting).
+
+## 4. Required Pages & 10 Homepage Sections
+Top Navigation MUST explicitly include **Home** (`/`), **Products** (`/products`), **Projects** (`/projects`), **Manufacturing** (`/manufacturing`), **Quality** (`/quality`), **About** (`/about`), **News** (`/news` — exact label `News`, NEVER `Insights`), **Contact** (`/contact`).
+
+**Homepage 10 Purposeful Sections:**
+1. `hero-carousel` — Adaptive 3-slide customer Banner carousel
+2. `key-metrics` — 16+ Years Experience | 22,000 m² Xuyi Base | 37+ Delivered Projects | 30–45 Days Delivery
+3. `category-matrix` — 7 clickable equipment categories linking to `/products?category=<slug>`
+4. `threejs-process-studio` — Interactive Light-Canvas Three.js 3D Petrochemical Equipment Cutaway Studio
+5. `featured-equipment` — Featured equipment cards with structured engineering metrics (167 m² reboiler, 480 m² heat exchanger, 108 m delayed coking tower, 1,000 m³ diphenylethane tank, 2,000 m³ anaerobic reactor, L1/L3 condensers)
+6. `client-projects-showcase` — Major Cooperating Clients roster (**Sinopec Jiangsu Petroleum Branch, Shandong Haiyou Petrochemical, Jiangsu Fuqiang New Materials, ADAMA Anpon (Jiangsu), Datang (Jiangsu) Environmental Equipment, Nanjing Jinling Huntsman, Jiangsu Hankang Electronic Materials, Jiangsu Huaihe Chemical, Gansu Research Institute of Chemical Industry, Shandong Head Group, Weiming Petrochemical, CITIC Yuanjun**) + flagship case study cards linking to `/projects`
+7. `individual-certifications` — Individual exhibition cards for Work Safety License & Construction Enterprise Qualification Certificate with zoom lightbox
+8. `manufacturing-base` — Xuyi 33-mu manufacturing base, heavy fabrication hall, laser cutting, submerged-arc welding, NDT & spectrometer inspection
+9. `buyer-faq` — Clean 2-column accordion (MOQ 1 unit, OEM/ODM customization, 30–45 day lead time, 10-year design life, technical datasheets & third-party inspection)
+10. `inquiry-rfq` — Balanced 2-column section: Left column with full company summary, official phone `+86 193 5173 7555`, plant address `No. 19-8 Longshan Road, Economic Development Zone, Xuyi County, Huai'an, Jiangsu, China`, and email `info@ruizhipetrochemicalequipment.com`; Right column with engineering RFQ form (Name, Email, Company, Phone, Equipment/Specs, Message + 4-digit image CAPTCHA slot).
+
+## 5. Strict Compliance Guardrails
+- **ZERO** mention of `warranty`, `warranties`, `guarantee`, `guaranteed`, or any warranty duration anywhere in copy, FAQ, metadata, or schema.
+- **ZERO** internal audit/source language ("provided by customer", "verified", "27 documented models") and **ZERO** marketing buzzword `B2B` in public copy.
+- **News** page must show a clean empty state when no articles are published yet (NO fake demo news articles).
+- Footer copyright MUST read: `© {currentYear} Jiangsu Ruizhi Petrochemical Engineering Co., Ltd. All rights reserved.`
+
+
+
+
+## Attached Real Customer Images (Use directly for Logo, all 3 Hero Banners, Representative Products, Facility & Individual Certificates)
+1. 01-logo.png — Official English/Latin RZ brand logo (header, footer, favicon source)
+2. 02-banner-1.jpg — Customer Banner 1: Facility exterior on right, bright white-blue safe zone on left
+3. 03-banner-2.jpg — Customer Banner 2: Workshop heavy vessels on left, deep navy safe zone on right
+4. 04-banner-3.jpg — Customer Banner 3: Petrochemical column cluster on right, white architectural grid safe zone on left
+5. 05-prod-l1-condenser.jpg — Representative product (wide studio white cutout): L1 Stacked Twin-Shell Condenser
+6. 06-prod-l3-helical-bundle.jpg — Representative product (precision detail cutout): L3 Helical-Baffle Condenser Tube Bundle
+7. 07-prod-108m-coking-tower.jpg — Representative product (tall vertical column): 108 m Delayed Coking Tower
+8. 08-prod-storage-tanks.jpg — Representative product (outdoor industrial array): Industrial Vertical Storage Tanks
+9. 09-factory-aerial.jpg — Representative facility: Aerial view of Xuyi 33-mu (22,000 m²) manufacturing base
+10. 10-factory-workshop.jpg — Representative facility: Heavy fabrication workshop with 50/10t overhead bridge crane
+11. 11-cert-safety-license.jpg — Individual Certificate 1: Work Safety License (苏)JZ安许证字[2022]004596
+12. 12-cert-construction-qual.jpg — Individual Certificate 2: Construction Enterprise Qualification Certificate D332462680

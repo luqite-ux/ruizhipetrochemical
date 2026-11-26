@@ -1,0 +1,55 @@
+{
+  "context": {
+    "projectId": "project-a3d6c6fd-52a1-4b68-b284-b4fdc1b5b9e0",
+    "runId": "run-4952c7fc-f142-4f0b-9d3f-5ebcb5d6c121",
+    "purpose": "build"
+  },
+  "scope": "current-run-only",
+  "otherRunIds": [],
+  "checkedAt": "2026-11-26T04:28:07.375Z",
+  "complete": false,
+  "issues": [
+    "ADOPTION_UNRECORDED",
+    "DELIVERY_UNRECORDED"
+  ],
+  "pending": 0,
+  "failedQueryCount": 0,
+  "queries": [
+    {
+      "receiptPath": "D:\\Cursor\\Grand\\dulizhan\\ruizhipetrochemical\\deliverables\\case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "requestId": "query-5bf35266-8241-47eb-8cda-3b5dc776d460",
+      "request": {
+        "match": "fuzzy",
+        "sort": "relevance",
+        "limit": "8",
+        "query": "pressure vessel heat exchanger petrochemical equipment"
+      },
+      "status": 200,
+      "traceStatus": "recorded",
+      "decision": "missing",
+      "decisionSent": false,
+      "caseSlugs": [],
+      "reason": "",
+      "externalReferences": []
+    },
+    {
+      "receiptPath": "D:\\Cursor\\Grand\\dulizhan\\ruizhipetrochemical\\deliverables\\case-query-query-75d9ec62-9296-45e2-b9ca-dff3d18f3d64.json",
+      "requestId": "query-75d9ec62-9296-45e2-b9ca-dff3d18f3d64",
+      "request": {
+        "match": "fuzzy",
+        "sort": "relevance",
+        "limit": "6",
+        "query": "industrial equipment manufacturing"
+      },
+      "status": 200,
+      "traceStatus": "recorded",
+      "decision": "missing",
+      "decisionSent": false,
+      "caseSlugs": [],
+      "reason": "",
+      "externalReferences": []
+    }
+  ],
+  "deliveries": [],
+  "note": "Current run only; other runs are not certified. Adoption is agent-reported, not Owner acceptance or proven design improvement."
+}

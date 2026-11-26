@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "customerIndustry": "Petrochemical Pressure Vessels, Heat Exchangers, Distillation Columns & EPC Plant Installation",
+  "products": [
+    "Storage Tanks & Pressure Vessels (1,000 m³ Diphenylethane Tank, Vertical/Underground/Hydrogen Tanks)",
+    "Reactors & Reaction Systems (Tubular Loop Reactor, Agitated Pressure Reactor, Propylene Oxide Main Reaction System)",
+    "Columns & Process Towers (108 m Delayed Coking Tower, Distillation/Separation Columns, Chlorination & Exhaust Towers)",
+    "Packaged Process Units (DeNOx Catalyst Unit, Hydrogen Peroxide Process System)",
+    "Heat Exchangers & Condensers (167 m² Distillation Reboiler, 480 m² Exchanger, L1–L5 Condensers, Gas Coolers)",
+    "Environmental Water Treatment (2,000 m³ Anaerobic Reactor) & Industrial Basket Strainers"
+  ],
+  "targetBuyers": [
+    "Petrochemical & Chemical EPC Contractors",
+    "Refinery & Process Plant Engineers",
+    "Industrial Equipment Procurement Managers",
+    "Chemical Research Institutes"
+  ],
+  "peers": [
+    {
+      "name": "BORSIG Process Heat Exchanger GmbH",
+      "url": "https://www.borsig.de/en/",
+      "normalizedDomain": "borsig.de",
+      "source": "web",
+      "overseasEvidence": {
+        "country": "Germany",
+        "whyCompetitor": "German manufacturer of process heat exchangers, waste heat boilers, and pressure vessels for petrochemical plants.",
+        "sourceUrl": "https://www.borsig.de/en/"
+      },
+      "pagesReviewed": [
+        {
+          "kind": "home",
+          "url": "https://www.borsig.de/en/",
+          "observation": "Clean industrial navigation separating Products, Services, Company, News, Contact.",
+          "checkedAt": "2026-11-26T04:20:23.405Z",
+          "evidence": {
+            "path": "deliverables/blueprint-evidence/borsig-home.txt",
+            "sha256": "af58f6bfae0e969a85b8302df1715bd3d5a7518a57654193dd175a1b6b16d00a"
+          }
+        },
+        {
+          "kind": "navigation",
+          "url": "https://www.borsig.de/en/",
+          "observation": "Direct top-level product categories and technical contact path.",
+          "checkedAt": "2026-11-26T04:20:23.405Z",
+          "evidence": {
+            "path": "deliverables/blueprint-evidence/borsig-home.txt",
+            "sha256": "af58f6bfae0e969a85b8302df1715bd3d5a7518a57654193dd175a1b6b16d00a"
+          }
+        },
+        {
+          "kind": "products",
+          "url": "https://www.borsig.de/en/products/",
+          "observation": "Structured equipment taxonomy separating heat exchangers, pressure vessels, and process systems.",
+          "checkedAt": "2026-11-26T04:20:23.405Z",
+          "evidence": {
+            "path": "deliverables/blueprint-evidence/borsig-home.txt",
+            "sha256": "af58f6bfae0e969a85b8302df1715bd3d5a7518a57654193dd175a1b6b16d00a"
+          }
+        }
+      ],
+      "homeSections": [
+        "Hero",
+        "Product Lines",
+        "Process Applications",
+        "Engineering Services",
+        "News",
+        "Contact"
+      ],
+      "navigation": [
+        "Home",
+        "Products",
+        "Services",
+        "Company",
+        "News",
+        "Contact"
+      ],
+      "productTaxonomy": [
+        "Process Heat Exchangers",
+        "Pressure Vessels",
+        "Process Systems"
+      ],
+      "adopt": [
+        "Clear heat exchanger and pressure vessel taxonomy",
+        "Engineering-first technical copy"
+      ],
+      "reject": [
+        "Conglomerate sub-brand fragmentation",
+        "Static CSS-only layout without 3D cutaway"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.borsig.de/en/",
+          "observation": "Verified German petrochemical heat exchanger & vessel hierarchy."
+        }
+      ]
+    },
+    {
+      "name": "LEFFER GmbH & Co. KG",
+      "url": "https://leffer.de/en/",
+      "normalizedDomain": "leffer.de",
+      "source": "web",
+      "overseasEvidence": {
+        "country": "Germany",
+        "whyCompetitor": "German heavy steel construction, pressure vessel, reactor, and distillation column fabricator.",
+        "sourceUrl": "https://leffer.de/en/"
+      },
+      "pagesReviewed": [
+        {
+          "kind": "home",
+          "url": "https://leffer.de/en/",
+          "observation": "Emphasizes integrated heavy fabrication + site erection and refinery reference projects.",
+          "checkedAt": "2026-11-26T04:20:23.405Z",
+          "evidence": {
+            "path": "deliverables/blueprint-evidence/leffer-home.txt",
+            "sha256": "616d3108aac7290fd37cb42b77b0376fcec36a53d0133b6eea0934bb60baa54c"
+          }
+        },
+        {
+          "kind": "navigation",
+          "url": "https://leffer.de/en/",
+          "observation": "Separates Equipment Manufacturing, Field Installation, Quality, and Projects.",
+          "checkedAt": "2026-11-26T04:20:23.405Z",
+          "evidence": {
+            "path": "deliverables/blueprint-evidence/leffer-home.txt",
+            "sha256": "616d3108aac7290fd37cb42b77b0376fcec36a53d0133b6eea0934bb60baa54c"
+          }
+        },
+        {
+          "kind": "products",
+          "url": "https://leffer.de/en/",
+          "observation": "Highlights heavy columns, reactors, and heat exchangers.",
+          "checkedAt": "2026-11-26T04:20:23.405Z",
+          "evidence": {
+            "path": "deliverables/blueprint-evidence/leffer-home.txt",
+            "sha256": "616d3108aac7290fd37cb42b77b0376fcec36a53d0133b6eea0934bb60baa54c"
+          }
+        }
+      ],
+      "homeSections": [
+        "Hero",
+        "Fabrication",
+        "Field Installation",
+        "Reference Projects",
+        "Quality",
+        "Contact"
+      ],
+      "navigation": [
+        "Home",
+        "Equipment",
+        "Projects",
+        "Quality",
+        "About",
+        "Contact"
+      ],
+      "productTaxonomy": [
+        "Pressure Vessels",
+        "Reactors",
+        "Columns",
+        "Heat Exchangers"
+      ],
+      "adopt": [
+        "Integrated fabrication + heavy field installation narrative",
+        "Real project reference table"
+      ],
+      "reject": [
+        "Legacy boxed navigation and dense text blocks"
+      ],
+      "evidence": [
+        {
+          "url": "https://leffer.de/en/",
+          "observation": "Verified German heavy vessel & field erection showcase."
+        }
+      ]
+    },
+    {
+      "name": "ZIEMEX",
+      "url": "https://www.ziemex.com/en/",
+      "normalizedDomain": "ziemex.com",
+      "source": "web",
+      "overseasEvidence": {
+        "country": "France",
+        "whyCompetitor": "French custom industrial distillation column, process tank, and heat exchanger manufacturer.",
+        "sourceUrl": "https://www.ziemex.com/en/"
+      },
+      "pagesReviewed": [
+        {
+          "kind": "home",
+          "url": "https://www.ziemex.com/en/",
+          "observation": "Bright European industrial layout spotlighting custom distillation columns and certifications.",
+          "checkedAt": "2026-11-26T04:20:23.405Z",
+          "evidence": {
+            "path": "deliverables/blueprint-evidence/ziemex-home.txt",
+            "sha256": "251bcad6e984dacab8a30b2d16b54c82e70a38d41397f5cff0ab96563e17b28a"
+          }
+        },
+        {
+          "kind": "navigation",
+          "url": "https://www.ziemex.com/en/",
+          "observation": "Clean menu linking Columns, Heat Exchangers, Tanks, Quality, About, Contact.",
+          "checkedAt": "2026-11-26T04:20:23.405Z",
+          "evidence": {
+            "path": "deliverables/blueprint-evidence/ziemex-home.txt",
+            "sha256": "251bcad6e984dacab8a30b2d16b54c82e70a38d41397f5cff0ab96563e17b28a"
+          }
+        },
+        {
+          "kind": "products",
+          "url": "https://www.ziemex.com/en/",
+          "observation": "Highlights custom thermal sizing and stainless/alloy vessel fabrication.",
+          "checkedAt": "2026-11-26T04:20:23.405Z",
+          "evidence": {
+            "path": "deliverables/blueprint-evidence/ziemex-home.txt",
+            "sha256": "251bcad6e984dacab8a30b2d16b54c82e70a38d41397f5cff0ab96563e17b28a"
+          }
+        }
+      ],
+      "homeSections": [
+        "Hero",
+        "Distillation Columns",
+        "Heat Exchangers",
+        "Quality & Certifications",
+        "Workshop",
+        "Contact"
+      ],
+      "navigation": [
+        "Home",
+        "Products",
+        "Quality",
+        "About",
+        "Contact"
+      ],
+      "productTaxonomy": [
+        "Distillation Columns",
+        "Process Tanks",
+        "Heat Exchangers"
+      ],
+      "adopt": [
+        "Bright light-surface editorial hierarchy",
+        "Individual quality certification visibility"
+      ],
+      "reject": [
+        "Regional-only case filtering"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.ziemex.com/en/",
+          "observation": "Verified French distillation column & heat exchanger presentation."
+        }
+      ]
+    }
+  ]
+}

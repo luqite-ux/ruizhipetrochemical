@@ -1,0 +1,38 @@
+[
+  {
+    "banner_id": "banner-1",
+    "message_role": "integrated-design-fabrication-installation-base",
+    "headline": "Integrated Petrochemical Equipment Fabrication & Plant Engineering",
+    "supporting_copy": "Built on a 22,000 m² Xuyi manufacturing base with 16 years of petrochemical, electromechanical, and pressure-vessel project delivery.",
+    "evidence_refs": [
+      "PDF page:3",
+      "banner（优化/1.jpg"
+    ],
+    "primary_cta_label": "Explore Equipment Catalog",
+    "primary_cta_target": "/products"
+  },
+  {
+    "banner_id": "banner-2",
+    "message_role": "heavy-pressure-vessel-and-workshop-capability",
+    "headline": "Custom Pressure Vessels, Heat Exchangers & Distillation Columns",
+    "supporting_copy": "Precision rolling, submerged-arc welding, laser cutting, and NDT inspection for carbon steel, stainless steel, and alloy process units.",
+    "evidence_refs": [
+      "企业产品资料&FQA问题收集表(5).xlsx Row 4-5",
+      "banner（优化/2.jpg"
+    ],
+    "primary_cta_label": "Inspect Manufacturing Facility",
+    "primary_cta_target": "/manufacturing"
+  },
+  {
+    "banner_id": "banner-3",
+    "message_role": "proven-epc-projects-and-enterprise-trust",
+    "headline": "Proven Across 37+ Major Refining, Chemical & Energy Projects",
+    "supporting_copy": "Trusted by Sinopec Jiangsu, Shandong Haiyou, Jiangsu Fuqiang, ADAMA Anpon, and Datang Environmental for mission-critical installations.",
+    "evidence_refs": [
+      "PDF pages:10,13,14",
+      "banner（优化/3.jpg"
+    ],
+    "primary_cta_label": "View Project Case Studies",
+    "primary_cta_target": "/projects"
+  }
+]

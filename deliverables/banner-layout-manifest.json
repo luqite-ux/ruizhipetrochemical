@@ -1,0 +1,38 @@
+{
+  "customer": "江苏锐志石化工程有限公司",
+  "banners": [
+    {
+      "banner_id": "banner-1",
+      "source_file": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\banner（优化\\1.jpg",
+      "subject_position": "right (48%-100%: modern glass-and-steel manufacturing headquarters with red vertical accents and refinery columns)",
+      "safe_zone_position": "left (0%-44%: bright white-to-ice-blue atmospheric fade)",
+      "desktop_copy_side": "left",
+      "desktop_text_tone": "dark-on-light",
+      "desktop_object_position": "right center",
+      "mobile_390_focus": "right center with separate clean light copy panel below or top-left contrast area",
+      "mobile_layout": "stacked-clean-card-below-image"
+    },
+    {
+      "banner_id": "banner-2",
+      "source_file": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\banner（优化\\2.jpg",
+      "subject_position": "left (0%-54%: heavy industrial pressure vessels and columns inside workshop with red overhead crane and 3 engineers)",
+      "safe_zone_position": "right (56%-100%: deep engineering navy gradient with thin precision red accent line)",
+      "desktop_copy_side": "right",
+      "desktop_text_tone": "light-on-dark",
+      "desktop_object_position": "left center",
+      "mobile_390_focus": "left center showing vessels and engineers; copy in crisp dark-navy panel below",
+      "mobile_layout": "stacked-navy-card-below-image"
+    },
+    {
+      "banner_id": "banner-3",
+      "source_file": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\banner（优化\\3.jpg",
+      "subject_position": "right (46%-100%: integrated petrochemical distillation column cluster, reactor spheres, heat exchangers and pumps)",
+      "safe_zone_position": "left (0%-42%: bright architectural white/light-blue grid fade)",
+      "desktop_copy_side": "left",
+      "desktop_text_tone": "dark-on-light",
+      "desktop_object_position": "right center",
+      "mobile_390_focus": "right center showing complete column & vessel cluster; copy in crisp white panel below",
+      "mobile_layout": "stacked-clean-card-below-image"
+    }
+  ]
+}

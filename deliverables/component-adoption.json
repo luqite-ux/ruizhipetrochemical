@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    {
+      "sectionId": "hero-carousel",
+      "query": "ruizhi hero-carousel",
+      "candidates": [],
+      "decision": "no-match",
+      "receipt": "deliverables/case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "reason": "Internal case library returned 0 hits for petrochemical vessel/column queries; implementing bespoke light-editorial React + Three.js components."
+    },
+    {
+      "sectionId": "key-metrics",
+      "query": "ruizhi key-metrics",
+      "candidates": [],
+      "decision": "no-match",
+      "receipt": "deliverables/case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "reason": "Internal case library returned 0 hits for petrochemical vessel/column queries; implementing bespoke light-editorial React + Three.js components."
+    },
+    {
+      "sectionId": "category-matrix",
+      "query": "ruizhi category-matrix",
+      "candidates": [],
+      "decision": "no-match",
+      "receipt": "deliverables/case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "reason": "Internal case library returned 0 hits for petrochemical vessel/column queries; implementing bespoke light-editorial React + Three.js components."
+    },
+    {
+      "sectionId": "threejs-process-studio",
+      "query": "ruizhi threejs-process-studio",
+      "candidates": [],
+      "decision": "no-match",
+      "receipt": "deliverables/case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "reason": "Internal case library returned 0 hits for petrochemical vessel/column queries; implementing bespoke light-editorial React + Three.js components."
+    },
+    {
+      "sectionId": "featured-equipment",
+      "query": "ruizhi featured-equipment",
+      "candidates": [],
+      "decision": "no-match",
+      "receipt": "deliverables/case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "reason": "Internal case library returned 0 hits for petrochemical vessel/column queries; implementing bespoke light-editorial React + Three.js components."
+    },
+    {
+      "sectionId": "client-projects-showcase",
+      "query": "ruizhi client-projects-showcase",
+      "candidates": [],
+      "decision": "no-match",
+      "receipt": "deliverables/case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "reason": "Internal case library returned 0 hits for petrochemical vessel/column queries; implementing bespoke light-editorial React + Three.js components."
+    },
+    {
+      "sectionId": "individual-certifications",
+      "query": "ruizhi individual-certifications",
+      "candidates": [],
+      "decision": "no-match",
+      "receipt": "deliverables/case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "reason": "Internal case library returned 0 hits for petrochemical vessel/column queries; implementing bespoke light-editorial React + Three.js components."
+    },
+    {
+      "sectionId": "manufacturing-base",
+      "query": "ruizhi manufacturing-base",
+      "candidates": [],
+      "decision": "no-match",
+      "receipt": "deliverables/case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "reason": "Internal case library returned 0 hits for petrochemical vessel/column queries; implementing bespoke light-editorial React + Three.js components."
+    },
+    {
+      "sectionId": "buyer-faq",
+      "query": "ruizhi buyer-faq",
+      "candidates": [],
+      "decision": "no-match",
+      "receipt": "deliverables/case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "reason": "Internal case library returned 0 hits for petrochemical vessel/column queries; implementing bespoke light-editorial React + Three.js components."
+    },
+    {
+      "sectionId": "inquiry-rfq",
+      "query": "ruizhi inquiry-rfq",
+      "candidates": [],
+      "decision": "no-match",
+      "receipt": "deliverables/case-query-query-5bf35266-8241-47eb-8cda-3b5dc776d460.json",
+      "reason": "Internal case library returned 0 hits for petrochemical vessel/column queries; implementing bespoke light-editorial React + Three.js components."
+    }
+  ]
+}

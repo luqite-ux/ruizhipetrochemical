@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "templateFamily": "oem-fabrication",
+  "navigation": [
+    {
+      "label": "Home",
+      "route": "/",
+      "level": 1,
+      "source": "Mandatory explicit Home link",
+      "referencePeer": "borsig.de"
+    },
+    {
+      "label": "Products",
+      "route": "/products",
+      "level": 1,
+      "source": "7 equipment categories & 27 products",
+      "referencePeer": "borsig.de"
+    },
+    {
+      "label": "Projects",
+      "route": "/projects",
+      "level": 1,
+      "source": "PDF 37+ installation & 6 fabrication cases + enterprise clients",
+      "referencePeer": "leffer.de"
+    },
+    {
+      "label": "Manufacturing",
+      "route": "/manufacturing",
+      "level": 1,
+      "source": "33-mu Xuyi base, 5 optimized facility photos & 22 workshop machines",
+      "referencePeer": "leffer.de"
+    },
+    {
+      "label": "Quality",
+      "route": "/quality",
+      "level": 1,
+      "source": "2 individual qualification certificates + NDT & spectrometer inspection",
+      "referencePeer": "ziemex.com"
+    },
+    {
+      "label": "About",
+      "route": "/about",
+      "level": 1,
+      "source": "16-year history, corporate values, Xuyi base",
+      "referencePeer": "ziemex.com"
+    },
+    {
+      "label": "News",
+      "route": "/news",
+      "level": 1,
+      "source": "Backend-driven News hub (exact label News)",
+      "referencePeer": "borsig.de"
+    },
+    {
+      "label": "Contact",
+      "route": "/contact",
+      "level": 1,
+      "source": "Official phone, Xuyi address, RFQ form with 4-digit CAPTCHA",
+      "referencePeer": "borsig.de"
+    }
+  ],
+  "productTaxonomy": [
+    {
+      "customerProduct": "1,000 m³ Diphenylethane Storage Tank",
+      "category": "Storage Tanks & Pressure Vessels",
+      "route": "/products/diphenylethane-storage-tank-1000m3",
+      "source": "公司产品图片(优化/储罐 & 压力容器/1000立方二苯乙烷储罐制造及设计.jpg + 企业产品资料&FQA问题收集表(5).xlsx Row 4"
+    },
+    {
+      "customerProduct": "Industrial Vertical & Field-Erected Storage Tanks",
+      "category": "Storage Tanks & Pressure Vessels",
+      "route": "/products/industrial-vertical-storage-tanks",
+      "source": "公司产品图片(优化/储罐 & 压力容器/储罐2.jpg, 储罐3.jpg, 储罐4.jpg + PDF P11/P13"
+    },
+    {
+      "customerProduct": "Vertical Pressure Storage & Process Vessel",
+      "category": "Storage Tanks & Pressure Vessels",
+      "route": "/products/vertical-pressure-reaction-storage-vessel",
+      "source": "公司产品图片(优化/储罐 & 压力容器/储罐（反应釜）.jpg + 企业产品资料&FQA问题收集表(5).xlsx Row 5"
+    },
+    {
+      "customerProduct": "Underground Horizontal Storage Tank",
+      "category": "Storage Tanks & Pressure Vessels",
+      "route": "/products/underground-horizontal-storage-tank",
+      "source": "公司产品图片(优化/储罐 & 压力容器/地埋储罐.jpg"
+    },
+    {
+      "customerProduct": "High-Pressure Hydrogen Storage Tank",
+      "category": "Storage Tanks & Pressure Vessels",
+      "route": "/products/high-pressure-hydrogen-storage-tank",
+      "source": "公司产品图片(优化/储罐 & 压力容器/氢气储罐.jpg + PDF P13/P16"
+    },
+    {
+      "customerProduct": "Custom Chemical Process Reactor Vessel",
+      "category": "Reactors & Reaction Systems",
+      "route": "/products/custom-chemical-process-reactor",
+      "source": "公司产品图片(优化/反应釜/反应器.jpg, 反应器 (2).jpg"
+    },
+    {
+      "customerProduct": "Tubular Loop Reactor Pilot & Process Unit",
+      "category": "Reactors & Reaction Systems",
+      "route": "/products/tubular-loop-reactor-unit",
+      "source": "公司产品图片(优化/反应釜/循环管管式反应器.jpg + PDF P07/P10"
+    },
+    {
+      "customerProduct": "Agitated Pressure Reactor Vessel",
+      "category": "Reactors & Reaction Systems",
+      "route": "/products/agitated-pressure-reactor-vessel",
+      "source": "公司产品图片(优化/反应釜/搅拌反应压力容器.jpg"
+    },
+    {
+      "customerProduct": "Propylene Oxide Main Reaction System",
+      "category": "Reactors & Reaction Systems",
+      "route": "/products/propylene-oxide-main-reaction-system",
+      "source": "公司产品图片(优化/反应釜/环氧丙烷反应系统.jpg + PDF P12/P14"
+    },
+    {
+      "customerProduct": "108 m Delayed Coking Tower",
+      "category": "Columns & Process Towers",
+      "route": "/products/delayed-coking-tower-108m",
+      "source": "公司产品图片(优化/塔器设备/108m延迟焦化塔.jpg + PDF P14"
+    },
+    {
+      "customerProduct": "Process Distillation & Separation Column",
+      "category": "Columns & Process Towers",
+      "route": "/products/process-distillation-separation-column",
+      "source": "公司产品图片(优化/塔器设备/储罐塔器.jpg, 储罐塔器2.jpg + Excel Keywords"
+    },
+    {
+      "customerProduct": "Synthetic Ammonia Shift & Desulfurization Tower Unit",
+      "category": "Columns & Process Towers",
+      "route": "/products/synthetic-ammonia-shift-desulfurization-unit",
+      "source": "公司产品图片(优化/塔器设备/合成氨变脱溜装置.jpg + PDF P13/P20"
+    },
+    {
+      "customerProduct": "Industrial Exhaust Gas Purification & Scrubbing Tower",
+      "category": "Columns & Process Towers",
+      "route": "/products/industrial-exhaust-gas-purification-tower",
+      "source": "公司产品图片(优化/塔器设备/废气净化塔.jpg, 废气净化塔2.jpg + PDF P13"
+    },
+    {
+      "customerProduct": "Chlorination Tower Process & Pilot Unit",
+      "category": "Columns & Process Towers",
+      "route": "/products/chlorination-tower-process-unit",
+      "source": "公司产品图片(优化/塔器设备/氯化塔装置.jpg + PDF P08/P10"
+    },
+    {
+      "customerProduct": "Catalyst & DeNOx Process Unit",
+      "category": "Packaged Process Units",
+      "route": "/products/catalyst-manufacturing-process-unit",
+      "source": "公司产品图片(优化/成套工艺装置/催化剂装置.jpg + PDF P10"
+    },
+    {
+      "customerProduct": "Hydrogen Peroxide Process Equipment System",
+      "category": "Packaged Process Units",
+      "route": "/products/hydrogen-peroxide-process-system",
+      "source": "公司产品图片(优化/成套工艺装置/双氧水设备.jpg + PDF P14"
+    },
+    {
+      "customerProduct": "167 m² Distillation Reboiler",
+      "category": "Heat Exchangers & Condensers",
+      "route": "/products/distillation-reboiler-167m2",
+      "source": "公司产品图片(优化/换热器/167㎡精馏再沸器2.jpg"
+    },
+    {
+      "customerProduct": "480 m² Industrial Shell-and-Tube Heat Exchanger",
+      "category": "Heat Exchangers & Condensers",
+      "route": "/products/shell-and-tube-heat-exchanger-480m2",
+      "source": "公司产品图片(优化/换热器/480㎡换热器.jpg, 480㎡换热器2.jpg"
+    },
+    {
+      "customerProduct": "L1 Series Stacked Twin-Shell Condenser",
+      "category": "Heat Exchangers & Condensers",
+      "route": "/products/l1-twin-shell-industrial-condenser",
+      "source": "公司产品图片(优化/换热器/L1冷凝器.jpg"
+    },
+    {
+      "customerProduct": "L2 Series Kettle-Type Condenser / Vaporizer",
+      "category": "Heat Exchangers & Condensers",
+      "route": "/products/l2-kettle-type-industrial-condenser",
+      "source": "公司产品图片(优化/换热器/L2冷凝器.jpg"
+    },
+    {
+      "customerProduct": "L3 Series Helical-Baffle Condenser Tube Bundle",
+      "category": "Heat Exchangers & Condensers",
+      "route": "/products/l3-helical-baffle-tube-bundle-condenser",
+      "source": "公司产品图片(优化/换热器/L3冷凝器.jpg"
+    },
+    {
+      "customerProduct": "L4 / L5 Series Process Condensers",
+      "category": "Heat Exchangers & Condensers",
+      "route": "/products/l4-l5-industrial-condenser-series",
+      "source": "公司产品图片(优化/换热器/L4冷凝器.jpg, L5冷凝器.jpg"
+    },
+    {
+      "customerProduct": "Tubular Shell-and-Tube Heat Exchanger",
+      "category": "Heat Exchangers & Condensers",
+      "route": "/products/tubular-shell-and-tube-heat-exchanger",
+      "source": "公司产品图片(优化/换热器/列管换热器2 (2).jpg"
+    },
+    {
+      "customerProduct": "Custom Stainless Steel Shell-and-Tube Heat Exchanger",
+      "category": "Heat Exchangers & Condensers",
+      "route": "/products/custom-stainless-shell-tube-exchanger",
+      "source": "公司产品图片(优化/换热器/定制管壳式换热器.jpg, 换热器2.jpg"
+    },
+    {
+      "customerProduct": "Industrial Gas Heat Exchanger & Gas Cooler",
+      "category": "Heat Exchangers & Condensers",
+      "route": "/products/industrial-gas-heat-exchanger-cooler",
+      "source": "公司产品图片(优化/换热器/气体换热器.jpg + PDF P09 + Excel image1.png"
+    },
+    {
+      "customerProduct": "2,000 m³ Wastewater Treatment Anaerobic Reactor",
+      "category": "Environmental Water Treatment",
+      "route": "/products/wastewater-anaerobic-reactor-2000m3",
+      "source": "公司产品图片(优化/环保水处理设备/2000m³污水处理厌氧反应器.jpg + PDF P13"
+    },
+    {
+      "customerProduct": "Industrial Basket Strainer & Pipeline Filter",
+      "category": "Filtration Equipment",
+      "route": "/products/industrial-basket-strainer-filter",
+      "source": "公司产品图片(优化/过滤设备/篮式过滤器.jpg"
+    }
+  ],
+  "homepageSections": [
+    {
+      "sectionId": "hero-carousel",
+      "type": "hero",
+      "purpose": "What does Ruizhi design, fabricate, and install?",
+      "informationGain": "Adaptive-Contrast 3-Slide Hero Carousel",
+      "factSource": "banner（优化/1.jpg, 2.jpg, 3.jpg",
+      "contentType": "bespoke",
+      "desktopStrategy": "Full-width 16:7 editorial hero with per-slide negative-space safe-zone typography",
+      "mobile390Strategy": "Crisp stacked image + high-contrast editorial copy card below on 390px",
+      "componentDecision": "bespoke",
+      "referencePeers": [
+        "borsig.de"
+      ]
+    },
+    {
+      "sectionId": "key-metrics",
+      "type": "metrics",
+      "purpose": "Does Ruizhi have the scale and track record for industrial projects?",
+      "informationGain": "Verified Engineering & Scale Metrics",
+      "factSource": "PDF P03, P13-14, Excel FAQ",
+      "contentType": "bespoke",
+      "desktopStrategy": "4-column hairline-bordered architectural metric band",
+      "mobile390Strategy": "2x2 clean grid",
+      "componentDecision": "bespoke",
+      "referencePeers": [
+        "leffer.de"
+      ]
+    },
+    {
+      "sectionId": "category-matrix",
+      "type": "categories",
+      "purpose": "Which equipment categories can I source?",
+      "informationGain": "7 Equipment Categories Matrix",
+      "factSource": "公司产品图片(优化 (7 folders)",
+      "contentType": "bespoke",
+      "desktopStrategy": "Interactive light bento/editorial category cards with direct filtered links",
+      "mobile390Strategy": "1-column clean tap cards",
+      "componentDecision": "bespoke",
+      "referencePeers": [
+        "ziemex.com"
+      ]
+    },
+    {
+      "sectionId": "threejs-process-studio",
+      "type": "interactive-3d",
+      "purpose": "How are Ruizhi columns, heat exchangers, and reactors engineered internally?",
+      "informationGain": "Interactive Three.js 3D Petrochemical Equipment Cutaway Studio",
+      "factSource": "Owner Three.js requirement + real product specs",
+      "contentType": "bespoke-threejs",
+      "desktopStrategy": "Light-canvas Three.js PBR 3D studio (4 switchable models, cutaway toggle, 360° orbit)",
+      "mobile390Strategy": "Compact touch-friendly 3D stage with DPR cap and reduced-motion static fallback",
+      "componentDecision": "bespoke-threejs",
+      "referencePeers": [
+        "borsig.de"
+      ]
+    },
+    {
+      "sectionId": "featured-equipment",
+      "type": "products",
+      "purpose": "What concrete models and capacities has Ruizhi built?",
+      "informationGain": "Featured Engineered Equipment",
+      "factSource": "27 products (167 m² reboiler, 480 m² exchanger, 108 m tower, 1000 m³ tank, 2000 m³ anaerobic reactor)",
+      "contentType": "bespoke",
+      "desktopStrategy": "4-column equal-height light studio cards with spec tags",
+      "mobile390Strategy": "1-column cards",
+      "componentDecision": "bespoke",
+      "referencePeers": [
+        "leffer.de"
+      ]
+    },
+    {
+      "sectionId": "client-projects-showcase",
+      "type": "projects",
+      "purpose": "Which major petrochemical enterprises trust Ruizhi?",
+      "informationGain": "Major Cooperating Clients & Flagship Engineering Projects",
+      "factSource": "PDF P07-18, P20 (Sinopec, Haiyou, Fuqiang, ADAMA, Datang, Huntsman, Huaihe, Gansu Chem Inst)",
+      "contentType": "bespoke",
+      "desktopStrategy": "Editorial enterprise client roster + 4 flagship project case cards linking to /projects",
+      "mobile390Strategy": "Compact client grid + stacked project cards",
+      "componentDecision": "bespoke",
+      "referencePeers": [
+        "ziemex.com"
+      ]
+    },
+    {
+      "sectionId": "individual-certifications",
+      "type": "certifications",
+      "purpose": "What official engineering and safety qualifications does Ruizhi hold?",
+      "informationGain": "Individual Qualification Certificates",
+      "factSource": "PDF P06 (Work Safety License & Construction Enterprise Qualification Certificate)",
+      "contentType": "bespoke",
+      "desktopStrategy": "2-column individual certificate exhibition with clear scans, metadata & lightbox zoom",
+      "mobile390Strategy": "Stacked full-width certificate cards",
+      "componentDecision": "bespoke",
+      "referencePeers": [
+        "borsig.de"
+      ]
+    },
+    {
+      "sectionId": "manufacturing-base",
+      "type": "manufacturing",
+      "purpose": "What real plant, cranes, and welding/NDT machines back fabrication?",
+      "informationGain": "Xuyi 22,000 m² Manufacturing Base & Workshop",
+      "factSource": "公司图片（优化/1-5.jpg + 外网图册/公司设备图片",
+      "contentType": "bespoke",
+      "desktopStrategy": "Asymmetric light editorial gallery showcasing R&D building, aerial base, 50/10t crane hall, laser cutting & shot blasting",
+      "mobile390Strategy": "Stacked gallery with clean captions",
+      "componentDecision": "bespoke",
+      "referencePeers": [
+        "leffer.de"
+      ]
+    },
+    {
+      "sectionId": "buyer-faq",
+      "type": "faq",
+      "purpose": "What are MOQ, OEM/ODM, lead time, design life, and inspection policies?",
+      "informationGain": "Procurement & Engineering FAQ",
+      "factSource": "Excel FQA问题 (warranty rows excluded)",
+      "contentType": "bespoke",
+      "desktopStrategy": "2-column balanced interactive accordion",
+      "mobile390Strategy": "Single-column accordion",
+      "componentDecision": "bespoke",
+      "referencePeers": [
+        "ziemex.com"
+      ]
+    },
+    {
+      "sectionId": "inquiry-rfq",
+      "type": "contact",
+      "purpose": "How do I submit drawings/specs and contact the engineering team?",
+      "informationGain": "Request an Engineering Quotation",
+      "factSource": "产品资料/资料.png + PDF P21",
+      "contentType": "bespoke",
+      "desktopStrategy": "Balanced 2-column company credentials/address/phone panel + RFQ form with 4-digit CAPTCHA",
+      "mobile390Strategy": "Stacked contact card + RFQ form",
+      "componentDecision": "bespoke",
+      "referencePeers": [
+        "borsig.de"
+      ]
+    }
+  ]
+}

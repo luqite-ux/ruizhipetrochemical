@@ -1,0 +1,67 @@
+{
+  "customer": "江苏锐志石化工程有限公司",
+  "representative_only": true,
+  "note": "Logo + all 3 customer banners + 4 representative product morphologies + 2 facility photos + 2 individual qualification certificates. Full 27 products (35+1 photos), 22 equipment photos, and all PDF case studies will be integrated by Codex after v0 source download.",
+  "items": [
+    {
+      "file": "01-logo.png",
+      "source": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\logo.png",
+      "reason": "Official English/Latin RZ brand logo (header, footer, favicon source)"
+    },
+    {
+      "file": "02-banner-1.jpg",
+      "source": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\banner（优化\\1.jpg",
+      "reason": "Customer Banner 1: Facility exterior on right, bright white-blue safe zone on left"
+    },
+    {
+      "file": "03-banner-2.jpg",
+      "source": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\banner（优化\\2.jpg",
+      "reason": "Customer Banner 2: Workshop heavy vessels on left, deep navy safe zone on right"
+    },
+    {
+      "file": "04-banner-3.jpg",
+      "source": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\banner（优化\\3.jpg",
+      "reason": "Customer Banner 3: Petrochemical column cluster on right, white architectural grid safe zone on left"
+    },
+    {
+      "file": "05-prod-l1-condenser.jpg",
+      "source": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\公司产品图片(优化\\换热器\\L1冷凝器.jpg",
+      "reason": "Representative product (wide studio white cutout): L1 Stacked Twin-Shell Condenser"
+    },
+    {
+      "file": "06-prod-l3-helical-bundle.jpg",
+      "source": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\公司产品图片(优化\\换热器\\L3冷凝器.jpg",
+      "reason": "Representative product (precision detail cutout): L3 Helical-Baffle Condenser Tube Bundle"
+    },
+    {
+      "file": "07-prod-108m-coking-tower.jpg",
+      "source": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\公司产品图片(优化\\塔器设备\\108m延迟焦化塔.jpg",
+      "reason": "Representative product (tall vertical column): 108 m Delayed Coking Tower"
+    },
+    {
+      "file": "08-prod-storage-tanks.jpg",
+      "source": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\公司产品图片(优化\\储罐 & 压力容器\\储罐2.jpg",
+      "reason": "Representative product (outdoor industrial array): Industrial Vertical Storage Tanks"
+    },
+    {
+      "file": "09-factory-aerial.jpg",
+      "source": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\公司图片（优化\\2.jpg",
+      "reason": "Representative facility: Aerial view of Xuyi 33-mu (22,000 m²) manufacturing base"
+    },
+    {
+      "file": "10-factory-workshop.jpg",
+      "source": "E:\\E暂存\\1081-江苏锐志石化工程有限公司\\公司图片（优化\\3.jpg",
+      "reason": "Representative facility: Heavy fabrication workshop with 50/10t overhead bridge crane"
+    },
+    {
+      "file": "11-cert-safety-license.jpg",
+      "source": "D:\\Cursor\\Grand\\huanqiu-admin\\.delivery-state\\ruizhipetrochemical\\intake-extract\\pdf-extract\\images\\p06_img02_8d51748d.jpg",
+      "reason": "Individual Certificate 1: Work Safety License (苏)JZ安许证字[2022]004596"
+    },
+    {
+      "file": "12-cert-construction-qual.jpg",
+      "source": "D:\\Cursor\\Grand\\huanqiu-admin\\.delivery-state\\ruizhipetrochemical\\intake-extract\\pdf-extract\\images\\p06_img03_8c9f8651.jpg",
+      "reason": "Individual Certificate 2: Construction Enterprise Qualification Certificate D332462680"
+    }
+  ]
+}
