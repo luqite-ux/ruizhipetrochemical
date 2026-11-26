@@ -25,17 +25,34 @@ export function Reveal({ children, index = 0, className, as: Tag = 'div' }: Reve
     if (rect.top < window.innerHeight * 0.92) return
 
     setState('hidden')
+    let revealed = false
+    const revealNow = () => {
+      if (revealed) return
+      revealed = true
+      setState('visible')
+      observer.disconnect()
+      window.removeEventListener('scroll', onScroll)
+    }
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries.some((e) => e.isIntersecting)) {
-          setState('visible')
-          observer.disconnect()
+          revealNow()
         }
       },
-      { threshold: 0.08, rootMargin: '0px 0px -6% 0px' },
+      { threshold: 0.01, rootMargin: '0px 0px 0px 0px' },
     )
+    const onScroll = () => {
+      const r = el.getBoundingClientRect()
+      if (r.top < window.innerHeight && r.bottom > 0) {
+        revealNow()
+      }
+    }
     observer.observe(el)
-    return () => observer.disconnect()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', onScroll)
+    }
   }, [])
 
   return (
