@@ -111,7 +111,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 href={`/products/${item.slug}`}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-hairline bg-white hover:border-navy/40 hover:shadow-md"
               >
-                <div className="aspect-[4/3] w-full overflow-hidden bg-alabaster">
+                <div className="aspect-square w-full overflow-hidden bg-alabaster">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={item.image_url} alt={item.name} className="h-full w-full object-cover" />
                 </div>

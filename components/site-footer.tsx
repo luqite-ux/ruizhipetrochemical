@@ -9,7 +9,7 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-hairline bg-alabaster">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.15fr_0.8fr_1fr_1.55fr]">
         <div>
           <BrandLogo heightClass="h-14" />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-body">
@@ -59,7 +59,7 @@ export function SiteFooter() {
             </li>
             <li className="flex gap-3">
               <Mail className="mt-0.5 size-4 shrink-0 text-navy" aria-hidden />
-              <a href={`mailto:${COMPANY.email}`} className="break-all hover:text-navy">
+              <a href={`mailto:${COMPANY.email}`} className="whitespace-nowrap hover:text-navy">
                 {COMPANY.email}
               </a>
             </li>

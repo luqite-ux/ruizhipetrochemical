@@ -9,7 +9,7 @@ export const revalidate = 60
 export const metadata: Metadata = {
   title: 'Equipment Catalog',
   description:
-    'Browse 27 custom petrochemical equipment models across 7 categories: storage tanks, pressure vessels, reactors, distillation columns, heat exchangers, condensers, and filtration units.',
+    'Browse 28 custom petrochemical equipment models across 7 categories: storage tanks, pressure vessels, reactors, distillation columns, heat exchangers, condensers, and filtration units.',
 }
 
 export default async function ProductsPage() {

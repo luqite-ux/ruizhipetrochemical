@@ -4,8 +4,8 @@ export const COMPANY = {
   name: 'Jiangsu Ruizhi Petrochemical Engineering Co., Ltd.',
   shortName: 'Ruizhi Petrochemical',
   monogram: 'RZ',
-  phone: '+86 193 5173 7555',
-  phoneHref: 'tel:+8619351737555',
+  phone: '+86 195 9993 1811',
+  phoneHref: 'tel:+8619599931811',
   email: 'info@ruizhipetrochemicalequipment.com',
   address:
     "No. 19-8 Longshan Road, Economic Development Zone, Xuyi County, Huai'an, Jiangsu, China",

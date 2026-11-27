@@ -8,12 +8,12 @@ export function ProductGalleryClient({ images, name }: { images: string[]; name:
 
   return (
     <div className="space-y-4">
-      <div className="overflow-hidden rounded-2xl border border-hairline bg-alabaster">
+      <div className="overflow-hidden rounded-2xl border border-hairline bg-white">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={safeImages[active] || safeImages[0]}
           alt={name}
-          className="aspect-[4/3] w-full object-contain bg-white p-2"
+          className="aspect-square w-full object-contain bg-white"
         />
       </div>
       {safeImages.length > 1 && (
@@ -28,7 +28,7 @@ export function ProductGalleryClient({ images, name }: { images: string[]; name:
               }`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={src} alt={`${name} view ${idx + 1}`} className="aspect-[4/3] w-full object-cover rounded-lg" />
+              <img src={src} alt={`${name} view ${idx + 1}`} className="aspect-square w-full object-cover rounded-lg" />
             </button>
           ))}
         </div>

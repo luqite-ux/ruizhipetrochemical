@@ -95,7 +95,7 @@ export function ProductCatalogClient({ categories, products, initialCategory = '
               href={`/products/${prod.slug}`}
               className="group flex h-full flex-col overflow-hidden rounded-2xl border border-hairline bg-white transition-all duration-300 hover:-translate-y-1 hover:border-navy/40 hover:shadow-md"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-alabaster">
+              <div className="relative aspect-square w-full overflow-hidden bg-alabaster">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={prod.image_url}
