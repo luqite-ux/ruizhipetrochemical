@@ -75,12 +75,12 @@ export const R2_CASES = [
   {
     "slug": "sinopec-qihu-oil-depot",
     "caption": "Sinopec Jiangsu Petroleum Branch — Huai'an Qihu Oil Depot Tank Farm (8×5000 m³, 4×3000 m³, 2×1000 m³)",
-    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/cases/sinopec-qihu-oil-depot-33c96112a8.jpg"
+    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/cases/sinopec-qihu-oil-depot-clean-0c30974486.jpg"
   },
   {
     "slug": "fuqiang-po-main-reactor",
     "caption": "Jiangsu Fuqiang New Materials — 100,000 t/yr Propylene Oxide Main Reaction Unit (3×386-Ton Reactors)",
-    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/cases/fuqiang-po-main-reactor-4bf6722918.jpg"
+    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/cases/fuqiang-po-main-reactor-clean-a21c955e7f.jpg"
   },
   {
     "slug": "huaihe-coal-gasification",
@@ -90,12 +90,12 @@ export const R2_CASES = [
   {
     "slug": "huaihe-psa-hydrogen-overview",
     "caption": "Jiangsu Huaihe Chemical — PSA Decarbonization & Hydrogen Purification Unit (Aerial View)",
-    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/cases/huaihe-psa-hydrogen-overview-b23c9ddc5d.jpg"
+    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/cases/huaihe-psa-hydrogen-overview-clean-01694f0b2c.jpg"
   },
   {
     "slug": "huaihe-psa-hydrogen-valves",
     "caption": "Jiangsu Huaihe Chemical — PSA Hydrogen Recovery Valve Skid & Instrumentation",
-    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/cases/huaihe-psa-hydrogen-valves-c3d37d4cdc.jpg"
+    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/cases/huaihe-psa-hydrogen-valves-clean-29d81305ea.jpg"
   },
   {
     "slug": "hankang-lithium-additive",
