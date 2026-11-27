@@ -44,7 +44,7 @@ function LanguageSwitcher({
       )}
     >
       <Globe className="ml-2 mr-1 hidden size-3.5 text-navy sm:inline-block" aria-hidden />
-      <Link
+      <a
         href={enHref}
         onClick={onSwitch}
         hrefLang="en"
@@ -56,8 +56,8 @@ function LanguageSwitcher({
         )}
       >
         EN
-      </Link>
-      <Link
+      </a>
+      <a
         href={zhHref}
         onClick={onSwitch}
         hrefLang="zh"
@@ -69,7 +69,7 @@ function LanguageSwitcher({
         )}
       >
         中文
-      </Link>
+      </a>
     </div>
   )
 }

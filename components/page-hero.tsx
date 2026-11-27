@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { getServerLocale } from '@/lib/server-locale'
+import { withLocale } from '@/lib/i18n'
 
 interface PageHeroProps {
   eyebrow: string
@@ -9,22 +11,25 @@ interface PageHeroProps {
   children?: ReactNode
 }
 
-export function PageHero({ eyebrow, title, description, crumbs, children }: PageHeroProps) {
+export async function PageHero({ eyebrow, title, description, crumbs, children }: PageHeroProps) {
+  const locale = await getServerLocale()
+  const isZh = locale === 'zh'
+
   return (
     <section className="blueprint-grid relative border-b border-hairline">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
-        <nav aria-label="Breadcrumb" className="mb-6 font-mono text-xs text-body">
+        <nav aria-label={isZh ? '面包屑导航' : 'Breadcrumb'} className="mb-6 font-mono text-xs text-body">
           <ol className="flex flex-wrap items-center gap-2">
             <li>
-              <Link href="/" className="hover:text-navy">
-                Home
+              <Link href={withLocale('/', locale)} className="hover:text-navy">
+                {isZh ? '首页' : 'Home'}
               </Link>
             </li>
             {(crumbs ?? [{ label: title }]).map((c) => (
               <li key={c.label} className="flex items-center gap-2">
                 <span aria-hidden>/</span>
                 {c.href ? (
-                  <Link href={c.href} className="hover:text-navy">
+                  <Link href={withLocale(c.href, locale)} className="hover:text-navy">
                     {c.label}
                   </Link>
                 ) : (
