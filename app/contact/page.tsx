@@ -20,14 +20,14 @@ export default function ContactPage() {
       />
 
       <section id="inquiry-rfq" className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1fr_1.15fr] lg:items-start">
-        <div className="space-y-6">
-          <div className="rounded-2xl border border-hairline bg-alabaster/70 p-6 sm:p-8">
+        <div className="min-w-0 space-y-6">
+          <div className="rounded-2xl border border-hairline bg-alabaster/70 p-5 sm:p-8">
             <h2 className="text-xl font-semibold text-ink">{COMPANY.name}</h2>
             <p className="mt-3 text-sm leading-relaxed text-body">{COMPANY.summary}</p>
             <div className="mt-6 space-y-4 border-t border-hairline pt-6 text-sm">
               <div className="flex items-start gap-3">
                 <Phone className="mt-0.5 size-4 shrink-0 text-navy" />
-                <div>
+                <div className="min-w-0">
                   <p className="font-mono text-[11px] uppercase tracking-wider text-body">Official Phone</p>
                   <a href={COMPANY.phoneHref} className="font-mono font-semibold text-ink hover:text-navy">
                     {COMPANY.phone}
@@ -36,9 +36,9 @@ export default function ContactPage() {
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="mt-0.5 size-4 shrink-0 text-navy" />
-                <div>
+                <div className="min-w-0">
                   <p className="font-mono text-[11px] uppercase tracking-wider text-body">Email</p>
-                  <a href={`mailto:${COMPANY.email}`} className="font-semibold text-ink hover:text-navy">
+                  <a href={`mailto:${COMPANY.email}`} className="text-[13px] font-semibold whitespace-nowrap text-ink hover:text-navy sm:text-sm">
                     {COMPANY.email}
                   </a>
                 </div>
