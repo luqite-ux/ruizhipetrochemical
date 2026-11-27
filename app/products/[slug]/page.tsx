@@ -5,13 +5,15 @@ import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { ProductGalleryClient } from '@/components/product-gallery-client'
 import { RfqForm } from '@/components/rfq-form'
 import { getProductBySlug, getProducts } from '@/lib/supabase'
+import { getServerLocale } from '@/lib/server-locale'
+import { withLocale } from '@/lib/i18n'
 
 export const revalidate = 60
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params
-  const product = await getProductBySlug(slug)
-  if (!product) return { title: 'Equipment Not Found' }
+  const [{ slug }, locale] = await Promise.all([params, getServerLocale()])
+  const product = await getProductBySlug(slug, locale)
+  if (!product) return { title: locale === 'zh' ? '未找到该设备' : 'Equipment Not Found' }
   return {
     title: product.name,
     description: product.description.slice(0, 155),
@@ -19,8 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const [product, allProducts] = await Promise.all([getProductBySlug(slug), getProducts()])
+  const [{ slug }, locale] = await Promise.all([params, getServerLocale()])
+  const isZh = locale === 'zh'
+  const [product, allProducts] = await Promise.all([getProductBySlug(slug, locale), getProducts(locale)])
   if (!product) notFound()
 
   const related = allProducts
@@ -32,10 +35,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       <div className="border-b border-hairline bg-alabaster/70">
         <div className="mx-auto max-w-7xl px-5 py-4 sm:px-8">
           <Link
-            href={`/products?category=${encodeURIComponent(product.category_slug)}`}
+            href={withLocale(`/products?category=${encodeURIComponent(product.category_slug)}`, locale)}
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-navy hover:text-crimson"
           >
-            <ArrowLeft className="size-3.5" /> Back to {product.category}
+            <ArrowLeft className="size-3.5" /> {isZh ? `返回 ${product.category}` : `Back to ${product.category}`}
           </Link>
         </div>
       </div>
@@ -53,7 +56,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <div className="mt-8 overflow-hidden rounded-2xl border border-hairline bg-white">
             <div className="border-b border-hairline bg-alabaster px-5 py-3">
               <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-navy">
-                Technical Specifications & Engineering Parameters
+                {isZh ? '技术规格与工程参数' : 'Technical Specifications & Engineering Parameters'}
               </h2>
             </div>
             <dl className="divide-y divide-hairline">
@@ -67,12 +70,20 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           </div>
 
           <ul className="mt-6 grid gap-2 text-xs text-ink sm:grid-cols-2">
-            {[
-              'Direct Source Factory (Xuyi, Jiangsu)',
-              'Technical Datasheets & NDT Records',
-              'OEM / ODM Custom Drawings Accepted',
-              'Third-Party Pre-Shipment Inspection',
-            ].map((item) => (
+            {(isZh
+              ? [
+                  '江苏盱眙源头制造工厂',
+                  '随附技术数据表与 NDT 检测记录',
+                  '支持按图定制 OEM / ODM',
+                  '支持发货前第三方驻厂检验',
+                ]
+              : [
+                  'Direct Source Factory (Xuyi, Jiangsu)',
+                  'Technical Datasheets & NDT Records',
+                  'OEM / ODM Custom Drawings Accepted',
+                  'Third-Party Pre-Shipment Inspection',
+                ]
+            ).map((item) => (
               <li key={item} className="flex items-center gap-2 font-medium">
                 <CheckCircle2 className="size-4 shrink-0 text-navy" />
                 {item}
@@ -87,28 +98,31 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <div className="mb-8 text-center">
             <p className="font-mono text-xs font-semibold uppercase tracking-widest text-crimson">
-              Equipment Inquiry
+              {isZh ? '设备技术询盘' : 'Equipment Inquiry'}
             </p>
             <h2 className="mt-2 text-2xl font-semibold text-ink sm:text-3xl">
-              Request Specifications & Quotation for {product.name}
+              {isZh ? `咨询 ${product.name} 技术方案与报价` : `Request Specifications & Quotation for ${product.name}`}
             </h2>
           </div>
           <RfqForm
             captchaScope={`product-detail-${product.slug}`}
             defaultProduct={`${product.name} (${product.model})`}
-            sourcePage={`/products/${product.slug}`}
+            sourcePage={withLocale(`/products/${product.slug}`, locale)}
+            locale={locale}
           />
         </div>
       </section>
 
       {related.length > 0 && (
         <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
-          <h2 className="text-xl font-semibold text-ink">Related {product.category}</h2>
+          <h2 className="text-xl font-semibold text-ink">
+            {isZh ? `相关 ${product.category}` : `Related ${product.category}`}
+          </h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-3">
             {related.map((item) => (
               <Link
                 key={item.slug}
-                href={`/products/${item.slug}`}
+                href={withLocale(`/products/${item.slug}`, locale)}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-hairline bg-white hover:border-navy/40 hover:shadow-md"
               >
                 <div className="aspect-square w-full overflow-hidden bg-alabaster">
@@ -119,7 +133,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                   <span className="font-mono text-[11px] font-semibold text-crimson">{item.model}</span>
                   <h3 className="mt-1 text-base font-semibold text-ink group-hover:text-navy">{item.name}</h3>
                   <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-navy">
-                    View Details <ArrowRight className="size-3.5" />
+                    {isZh ? '查看详情' : 'View Details'} <ArrowRight className="size-3.5" />
                   </span>
                 </div>
               </Link>

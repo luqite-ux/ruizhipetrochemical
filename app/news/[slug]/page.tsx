@@ -2,19 +2,22 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft, Calendar } from 'lucide-react'
 import { getArticles } from '@/lib/supabase'
+import { getServerLocale } from '@/lib/server-locale'
+import { withLocale } from '@/lib/i18n'
 
 export const revalidate = 60
 
 export default async function NewsDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const articles = await getArticles()
+  const [{ slug }, locale] = await Promise.all([params, getServerLocale()])
+  const isZh = locale === 'zh'
+  const articles = await getArticles(locale)
   const article = articles.find((a) => a.slug === slug)
   if (!article) notFound()
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
-      <Link href="/news" className="inline-flex items-center gap-1.5 text-xs font-semibold text-navy hover:text-crimson">
-        <ArrowLeft className="size-3.5" /> Back to News
+      <Link href={withLocale('/news', locale)} className="inline-flex items-center gap-1.5 text-xs font-semibold text-navy hover:text-crimson">
+        <ArrowLeft className="size-3.5" /> {isZh ? '返回新闻动态' : 'Back to News'}
       </Link>
       <div className="mt-6 flex items-center gap-2 font-mono text-xs text-body">
         <Calendar className="size-3.5 text-navy" />

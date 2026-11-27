@@ -1,17 +1,23 @@
 import Link from 'next/link'
 import { R2_LOGO_URL } from '@/lib/r2-assets'
+import { type Locale, withLocale } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
 
 interface BrandLogoProps {
   className?: string
   heightClass?: string
+  locale?: Locale
 }
 
-export function BrandLogo({ className, heightClass = 'h-14 sm:h-16' }: BrandLogoProps) {
+export function BrandLogo({ className, heightClass = 'h-14 sm:h-16', locale = 'en' }: BrandLogoProps) {
   return (
     <Link
-      href="/"
-      aria-label="Jiangsu Ruizhi Petrochemical Engineering – Home"
+      href={withLocale('/', locale)}
+      aria-label={
+        locale === 'zh'
+          ? '江苏锐志石化工程有限公司 – 返回首页'
+          : 'Jiangsu Ruizhi Petrochemical Engineering – Home'
+      }
       className={cn(
         'relative flex shrink-0 items-center rounded-sm focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 focus-visible:outline-none',
         heightClass,
@@ -21,7 +27,7 @@ export function BrandLogo({ className, heightClass = 'h-14 sm:h-16' }: BrandLogo
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={R2_LOGO_URL}
-        alt="Jiangsu Ruizhi Petrochemical Engineering Co., Ltd."
+        alt={locale === 'zh' ? '江苏锐志石化工程有限公司' : 'Jiangsu Ruizhi Petrochemical Engineering Co., Ltd.'}
         className="h-full w-auto object-contain"
       />
     </Link>

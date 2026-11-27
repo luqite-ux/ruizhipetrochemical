@@ -4,8 +4,64 @@ import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { Layers, RotateCw, Pause, Play, Eye, Compass } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { withLocale, type Locale } from '@/lib/i18n'
 
 type ModelKey = 'column' | 'exchanger' | 'reactor' | 'tank'
+
+const MODELS_ZH: Record<
+  ModelKey,
+  {
+    name: string
+    code: string
+    summary: string
+    specs: { label: string; value: string }[]
+  }
+> = {
+  column: {
+    name: '工艺精馏塔',
+    code: 'RZ-TW-DIST',
+    summary: '多塔盘立式精馏与分离塔器，配备人孔、塔顶气相接管及可剖视塔盘内件结构。',
+    specs: [
+      { label: '塔体高度', value: '最高 108 米级' },
+      { label: '设计压力', value: '≥ 0.1 MPa / 按需定制' },
+      { label: '设计寿命', value: '10 年' },
+      { label: '可选材质', value: '碳钢 / SS304 / SS316L / 合金' },
+    ],
+  },
+  exchanger: {
+    name: '管壳式换热器',
+    code: 'RZ-HX-ST480',
+    summary: '卧式工业管壳换热器，配备螺栓连接半球形管箱封头、管板及螺旋折流板管束剖视。',
+    specs: [
+      { label: '换热面积', value: '167 – 480 m²+' },
+      { label: '折流板型式', value: '螺旋折流板 / 弓形折流板' },
+      { label: '设计寿命', value: '10 年' },
+      { label: '检验检测', value: '无损检测 + 水压 + 光谱复检' },
+    ],
+  },
+  reactor: {
+    name: '带搅拌压力反应釜',
+    code: 'RZ-RX-AGIT',
+    summary: '立式夹套压力反应容器，配备顶部搅拌驱动装置、多层搅拌桨轴及法兰工艺接管。',
+    specs: [
+      { label: '工作压力', value: '≥ 0.1 MPa (PV ≥ 2.5 MPa·L)' },
+      { label: '装置形式', value: '带搅拌 / 环流中试 / 主反应器' },
+      { label: '重型吊装实绩', value: '单台高达 386 吨' },
+      { label: 'OEM / ODM', value: '按工艺数据表定制' },
+    ],
+  },
+  tank: {
+    name: '工业大型储罐',
+    code: 'RZ-TK-1000',
+    summary: '圆筒形常压及低压化工储罐，配备外盘梯加强圈、罐顶呼吸口与基础锚固环。',
+    specs: [
+      { label: '容积范围', value: '1,000 – 5,000 m³' },
+      { label: '压力等级', value: '常压（< 0.1 MPa）' },
+      { label: '常规交期', value: '30 – 45 天（标准配置）' },
+      { label: '起订量', value: '1 台' },
+    ],
+  },
+}
 
 const MODELS: Record<
   ModelKey,
@@ -238,7 +294,7 @@ function buildAssembly(key: ModelKey, cutaway: boolean): THREE.Group {
   return group
 }
 
-export function ThreeVesselStudio() {
+export function ThreeVesselStudio({ locale = 'en' }: { locale?: Locale }) {
   const [active, setActive] = useState<ModelKey>('column')
   const [cutaway, setCutaway] = useState(true)
   const [autoRotate, setAutoRotate] = useState(true)
@@ -372,15 +428,17 @@ export function ThreeVesselStudio() {
     }
   }, [active, cutaway, reducedMotion])
 
-  const current = MODELS[active]
+  const isZh = locale === 'zh'
+  const modelsMap = isZh ? MODELS_ZH : MODELS
+  const current = modelsMap[active]
 
   return (
     <div className="overflow-hidden rounded-2xl border border-hairline bg-white shadow-sm">
       <div className="grid lg:grid-cols-[1.35fr_1fr]">
-        <div className="relative flex flex-col border-b border-hairline lg:border-r lg:border-b-0">
+        <div className="relative min-w-0 flex flex-col border-b border-hairline lg:border-r lg:border-b-0">
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-hairline bg-alabaster/80 px-4 py-3">
             <div className="flex flex-wrap gap-1.5">
-              {(Object.keys(MODELS) as ModelKey[]).map((key) => (
+              {(Object.keys(modelsMap) as ModelKey[]).map((key) => (
                 <button
                   key={key}
                   type="button"
@@ -391,7 +449,7 @@ export function ThreeVesselStudio() {
                       : 'bg-white text-body border border-hairline hover:border-navy/40 hover:text-navy'
                   }`}
                 >
-                  {MODELS[key].name}
+                  {modelsMap[key].name}
                 </button>
               ))}
             </div>
@@ -404,7 +462,7 @@ export function ThreeVesselStudio() {
                 className="h-8 rounded-full text-xs"
               >
                 <Layers className="mr-1.5 size-3.5 text-crimson" />
-                {cutaway ? 'Cutaway On' : 'Full Shell'}
+                {cutaway ? (isZh ? '剖视已开启' : 'Cutaway On') : isZh ? '完整壳体' : 'Full Shell'}
               </Button>
               <Button
                 type="button"
@@ -412,7 +470,7 @@ export function ThreeVesselStudio() {
                 size="sm"
                 onClick={() => setAutoRotate((v) => !v)}
                 className="h-8 rounded-full text-xs"
-                aria-label={autoRotate ? 'Pause rotation' : 'Resume rotation'}
+                aria-label={autoRotate ? (isZh ? '暂停旋转' : 'Pause rotation') : isZh ? '恢复旋转' : 'Resume rotation'}
               >
                 {autoRotate ? <Pause className="size-3.5" /> : <Play className="size-3.5" />}
               </Button>
@@ -422,29 +480,29 @@ export function ThreeVesselStudio() {
           <div
             ref={mountRef}
             className="blueprint-grid relative h-[360px] w-full cursor-grab active:cursor-grabbing sm:h-[430px]"
-            aria-label={`Interactive 3D cutaway model of ${current.name}`}
+            aria-label={isZh ? `${current.name} 交互式 3D 剖视模型` : `Interactive 3D cutaway model of ${current.name}`}
           />
 
-          <div className="flex items-center justify-between border-t border-hairline bg-white px-4 py-2.5 text-xs text-body">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-t border-hairline bg-white px-4 py-2.5 text-xs text-body">
             <span className="inline-flex items-center gap-1.5 font-mono">
               <Compass className="size-3.5 text-navy" />
-              Drag 360° to inspect internal geometry
+              {isZh ? '拖动 360° 查看内部结构' : 'Drag 360° to inspect internal geometry'}
             </span>
             <span className="inline-flex items-center gap-1 font-mono text-navy">
               <Eye className="size-3.5" />
-              WebGL PBR Studio
+              {isZh ? 'WebGL 实时三维视图' : 'WebGL PBR Studio'}
             </span>
           </div>
         </div>
 
-        <div className="flex flex-col justify-between bg-white p-6 sm:p-8">
+        <div className="min-w-0 flex flex-col justify-between bg-white p-6 sm:p-8">
           <div>
             <div className="flex items-center justify-between gap-3">
               <span className="font-mono text-xs font-semibold uppercase tracking-widest text-crimson">
                 {current.code}
               </span>
               <span className="inline-flex items-center gap-1 rounded-full bg-alabaster px-2.5 py-1 font-mono text-[11px] text-navy border border-hairline">
-                <RotateCw className="size-3" /> Interactive 3D
+                <RotateCw className="size-3" /> {isZh ? '交互式 3D' : 'Interactive 3D'}
               </span>
             </div>
             <h3 className="mt-3 text-2xl font-semibold text-ink">{current.name}</h3>
@@ -464,10 +522,10 @@ export function ThreeVesselStudio() {
 
           <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-hairline pt-6">
             <Button asChild className="rounded-full bg-navy px-6 text-white hover:bg-navy/90">
-              <a href="/products">Browse Full Equipment Catalog</a>
+              <a href={withLocale('/products', locale)}>{isZh ? '浏览完整产品目录' : 'Browse Full Equipment Catalog'}</a>
             </Button>
             <Button asChild variant="outline" className="rounded-full px-5">
-              <a href="/contact#inquiry-rfq">Submit Process Datasheet</a>
+              <a href={withLocale('/contact#inquiry-rfq', locale)}>{isZh ? '提交工艺数据表' : 'Submit Process Datasheet'}</a>
             </Button>
           </div>
         </div>

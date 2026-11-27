@@ -28,7 +28,18 @@ export async function middleware(request: NextRequest) {
     return NextResponse.rewrite(url)
   }
 
-  return NextResponse.next()
+  const isZh = pathname === '/zh' || pathname.startsWith('/zh/')
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set('x-locale', isZh ? 'zh' : 'en')
+  requestHeaders.set('x-pathname', pathname)
+
+  if (isZh) {
+    const rewriteUrl = request.nextUrl.clone()
+    rewriteUrl.pathname = pathname === '/zh' ? '/' : pathname.slice(3) || '/'
+    return NextResponse.rewrite(rewriteUrl, { request: { headers: requestHeaders } })
+  }
+
+  return NextResponse.next({ request: { headers: requestHeaders } })
 }
 
 export const config = {

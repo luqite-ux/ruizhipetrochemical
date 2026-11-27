@@ -5,14 +5,17 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { ArrowRight, Search } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import type { LiveCategory, LiveProduct } from '@/lib/supabase'
+import { withLocale, type Locale } from '@/lib/i18n'
 
 interface Props {
   categories: LiveCategory[]
   products: LiveProduct[]
   initialCategory?: string
+  locale?: Locale
 }
 
-export function ProductCatalogClient({ categories, products, initialCategory = '' }: Props) {
+export function ProductCatalogClient({ categories, products, initialCategory = '', locale = 'en' }: Props) {
+  const isZh = locale === 'zh'
   const router = useRouter()
   const searchParams = useSearchParams()
   const activeCat = searchParams.get('category') || initialCategory
@@ -33,15 +36,15 @@ export function ProductCatalogClient({ categories, products, initialCategory = '
   }, [products, activeCat, query])
 
   const selectCategory = (slug: string) => {
-    if (!slug) router.push('/products', { scroll: false })
-    else router.push(`/products?category=${encodeURIComponent(slug)}`, { scroll: false })
+    if (!slug) router.push(withLocale('/products', locale), { scroll: false })
+    else router.push(withLocale(`/products?category=${encodeURIComponent(slug)}`, locale), { scroll: false })
   }
 
   return (
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
       {/* Category Filter Bar + Search */}
       <div className="flex flex-col gap-5 border-b border-hairline pb-8 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Equipment categories">
+        <div className="flex flex-wrap gap-2" role="tablist" aria-label={isZh ? '设备分类' : 'Equipment categories'}>
           <button
             type="button"
             onClick={() => selectCategory('')}
@@ -51,7 +54,7 @@ export function ProductCatalogClient({ categories, products, initialCategory = '
                 : 'border border-hairline bg-white text-body hover:border-navy hover:text-navy'
             }`}
           >
-            All Equipment ({products.length})
+            {isZh ? `全部设备 (${products.length})` : `All Equipment (${products.length})`}
           </button>
           {categories.map((c) => {
             const count = products.filter((p) => p.category_slug === c.slug).length
@@ -78,8 +81,8 @@ export function ProductCatalogClient({ categories, products, initialCategory = '
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search model or spec..."
-            aria-label="Search equipment"
+            placeholder={isZh ? '搜索设备名称或型号...' : 'Search model or spec...'}
+            aria-label={isZh ? '搜索设备' : 'Search equipment'}
             className="w-full rounded-full border border-hairline bg-alabaster py-2 pr-4 pl-10 text-sm text-ink focus:border-navy focus:bg-white focus:outline-none"
           />
         </div>
@@ -92,7 +95,7 @@ export function ProductCatalogClient({ categories, products, initialCategory = '
           return (
             <Link
               key={prod.slug}
-              href={`/products/${prod.slug}`}
+              href={withLocale(`/products/${prod.slug}`, locale)}
               className="group flex h-full flex-col overflow-hidden rounded-2xl border border-hairline bg-white transition-all duration-300 hover:-translate-y-1 hover:border-navy/40 hover:shadow-md"
             >
               <div className="relative aspect-square w-full overflow-hidden bg-alabaster">
@@ -121,7 +124,8 @@ export function ProductCatalogClient({ categories, products, initialCategory = '
                   ))}
                 </dl>
                 <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-xs font-semibold text-navy">
-                  View Engineering Parameters <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+                  {isZh ? '查看工程参数' : 'View Engineering Parameters'}{' '}
+                  <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
                 </span>
               </div>
             </Link>
@@ -131,7 +135,9 @@ export function ProductCatalogClient({ categories, products, initialCategory = '
 
       {filtered.length === 0 && (
         <div className="mt-12 rounded-2xl border border-hairline bg-alabaster p-12 text-center">
-          <p className="text-base font-semibold text-ink">No matching equipment found.</p>
+          <p className="text-base font-semibold text-ink">
+            {isZh ? '未找到匹配的设备型号。' : 'No matching equipment found.'}
+          </p>
           <button
             type="button"
             onClick={() => {
@@ -140,7 +146,7 @@ export function ProductCatalogClient({ categories, products, initialCategory = '
             }}
             className="mt-4 rounded-full bg-navy px-5 py-2 text-xs font-semibold text-white"
           >
-            Reset Filters
+            {isZh ? '重置筛选条件' : 'Reset Filters'}
           </button>
         </div>
       )}

@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import { CATEGORY_ZH_MAP } from '@/lib/i18n'
 
 export const TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID || ''
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
@@ -88,15 +89,25 @@ export async function getProducts(locale = 'en'): Promise<LiveProduct[]> {
     const gallery: string[] = Array.isArray(p.extra_data?.gallery) && p.extra_data.gallery.length
       ? p.extra_data.gallery
       : p.image_url ? [p.image_url] : []
+    const localizedCategory =
+      locale === 'zh'
+        ? CATEGORY_ZH_MAP[p.category_slug || ''] || p.category || ''
+        : p.category || ''
+    const localizedSpecs =
+      locale === 'zh' && p.extra_data?.specs_zh && typeof p.extra_data.specs_zh === 'object'
+        ? p.extra_data.specs_zh
+        : p.specs && typeof p.specs === 'object'
+          ? p.specs
+          : {}
     return {
       id: p.id,
       slug: p.slug,
       name: resolveI18n(p.name_i18n, p.name_en || p.name, locale),
       model: p.model || '',
-      category: p.category || '',
+      category: localizedCategory,
       category_slug: p.category_slug || '',
       description: resolveI18n(p.description_i18n, p.description_en || p.description || '', locale),
-      specs: (p.specs && typeof p.specs === 'object') ? p.specs : {},
+      specs: localizedSpecs,
       image_url: p.image_url || gallery[0] || '',
       gallery,
       is_featured: Boolean(p.extra_data?.is_featured),
