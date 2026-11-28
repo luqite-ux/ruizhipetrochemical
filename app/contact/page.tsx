@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { CheckCircle2, Mail, MapPin, Phone } from 'lucide-react'
+import { CheckCircle2, ExternalLink, Globe, Mail, MapPin, Phone } from 'lucide-react'
 import { PageHero } from '@/components/page-hero'
 import { RfqForm } from '@/components/rfq-form'
 import { getCompany, withLocale } from '@/lib/i18n'
@@ -49,9 +49,13 @@ export default async function ContactPage() {
                   <p className="font-mono text-[11px] uppercase tracking-wider text-body">
                     {isZh ? '联系电话' : 'Official Phone'}
                   </p>
-                  <a href={company.phoneHref} className="font-mono font-semibold text-ink hover:text-navy">
-                    {company.phone}
-                  </a>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 font-mono font-semibold text-ink">
+                    {company.phones.map((p) => (
+                      <a key={p.href} href={p.href} className="hover:text-navy">
+                        {isZh ? p.zhDisplay : p.display}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -62,6 +66,23 @@ export default async function ContactPage() {
                   </p>
                   <a href={`mailto:${company.email}`} className="text-[13px] font-semibold whitespace-nowrap text-ink hover:text-navy sm:text-sm">
                     {company.email}
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Globe className="mt-0.5 size-4 shrink-0 text-navy" />
+                <div className="min-w-0">
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-body">
+                    {isZh ? '国内官网' : 'China Official Website'}
+                  </p>
+                  <a
+                    href={company.domesticWebsite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 font-semibold text-navy hover:underline"
+                  >
+                    <span>{company.domesticWebsite}</span>
+                    <ExternalLink className="size-3.5 shrink-0" aria-hidden />
                   </a>
                 </div>
               </div>

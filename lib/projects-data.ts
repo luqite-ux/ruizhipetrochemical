@@ -17,21 +17,21 @@ export const MAJOR_CLIENTS = [
   { name: 'Jiangsu Hankang Electronic Materials', sector: 'Lithium Battery Materials' },
   { name: 'Jiangsu Huaihe Chemical Co., Ltd.', sector: 'Synthetic Ammonia & Nitro' },
   { name: 'Gansu Research Institute of Chemical Industry', sector: 'Pilot Reactors & Towers' },
-  { name: 'Shandong Linyi Dongliang Co., Ltd.', sector: 'Industrial Gas Cooling' },
+  { name: 'Linyi Dongliang Material Technology Co., Ltd.', sector: 'Industrial Gas Cooling' },
   { name: 'Shandong Head Group Co., Ltd.', sector: 'Polymer & Environmental' },
   { name: 'Jiangsu Weiming Petrochemical Co., Ltd.', sector: 'Cyclohexanone & Tank Farms' },
   { name: 'CITIC Yuanjun Environmental Protection', sector: 'Environmental Materials' },
   { name: 'Hunan Luli Wood Industry Co., Ltd.', sector: 'Industrial Production Lines' },
   { name: 'Nanjing Environmental Protection Innovation Center', sector: 'Process Piping & Tanks' },
   { name: "Ma'anshan Jinxing Chemical Group", sector: 'Titanium Dioxide' },
-  { name: "Huaneng Huai'an Power Plant", sector: 'Energy & Power' },
+  { name: "Jiangsu Huai'an Huaneng Power Plant", sector: 'Energy & Power' },
   { name: 'Jiangsu Foster Chemical Co., Ltd.', sector: 'Fine Chemicals' },
 ] as const
 
 export const FABRICATION_PROJECTS: EngineeringProject[] = [
   { no: 1, client: 'Gansu Research Institute of Chemical Industry', project: 'Custom Tubular Loop Reactor (Lab Pilot & Scale-Up Skid)', period: '2025.08 – 2025.09', location: 'Lanzhou, Gansu', category: 'Equipment Fabrication' },
   { no: 2, client: 'Gansu Research Institute of Chemical Industry', project: 'Multi-Column Chlorination Tower Pilot Unit Fabrication', period: '2025.10 – Present', location: 'Lanzhou, Gansu', category: 'Equipment Fabrication' },
-  { no: 3, client: 'Shandong Linyi Dongliang Co., Ltd.', project: 'Custom Industrial Gas Cooling Heat Exchanger Batch', period: '2025.12', location: 'Linyi, Shandong', category: 'Equipment Fabrication' },
+  { no: 3, client: 'Linyi Dongliang Material Technology Co., Ltd.', project: 'Custom Industrial Gas Cooling Heat Exchanger Batch', period: '2025.12', location: 'Linyi, Shandong', category: 'Equipment Fabrication' },
   { no: 4, client: 'Jiangsu Hankang Electronic Materials Co., Ltd.', project: '59,600 t/yr Lithium Battery Additive Complete Unit (Equipment, Piping, Steel Structure, Electrical, Instrumentation)', period: '2023.04 – 2024.11', location: "Huai'an Salt Chemical Park", category: 'Petrochemical EPC & Installation' },
   { no: 5, client: 'Datang (Jiangsu) Environmental Equipment Co., Ltd.', project: '10,000 m³/yr Honeycomb DeNOx Catalyst Manufacturing Line Installation', period: '2023.05 – 2023.11', location: 'Xuyi, Jiangsu', category: 'Environmental & Energy' },
   { no: 6, client: 'Nanjing Environmental Protection Industry Innovation Center', project: 'Lianyungang Project Storage Tanks, Process Piping, Valves & Structural Steel Fabrication & Installation', period: '2023.12 – 2024.02', location: 'Lianyungang, Jiangsu', category: 'Environmental & Energy' },
@@ -39,7 +39,7 @@ export const FABRICATION_PROJECTS: EngineeringProject[] = [
 
 export const INSTALLATION_TRACK_RECORD: EngineeringProject[] = [
   { no: 1, client: 'Sinopec Jiangsu Petroleum Branch', project: "Huai'an Qihu Oil Depot Project (8×5,000 m³, 4×3,000 m³, 2×1,000 m³ Storage Tanks, Process Piping, Fire Protection, Anti-Corrosion, Electrical & Instrumentation)", period: '2013.04 – 2014.11', location: "Qingpu, Huai'an", category: 'Petrochemical EPC & Installation' },
-  { no: 2, client: 'Shandong Haiyou Petrochemical Group', project: '1,000,000 t/yr Delayed Coking Integrated Unit Steel Structure & 101 m Coking Tower + Pipe Racks', period: '2018.05 – 2019.01', location: 'Rizhao, Shandong', category: 'Petrochemical EPC & Installation' },
+  { no: 2, client: 'Shandong Haiyou Petrochemical Group', project: '1,000,000 t/yr Delayed Coking Integrated Unit Steel Structure & 108 m Coking Tower + Pipe Racks', period: '2018.05 – 2019.01', location: 'Rizhao, Shandong', category: 'Petrochemical EPC & Installation' },
   { no: 3, client: 'Jiangsu Fuqiang New Materials Co., Ltd.', project: '100,000 t/yr Propylene Oxide Unit (Incl. Hoisting 3×386-Ton Main Reactors, Steel Structure & Anti-Corrosion)', period: '2019.03 – 2019.10', location: "Huai'an, Jiangsu", category: 'Petrochemical EPC & Installation' },
   { no: 4, client: 'Jiangsu Fuqiang New Materials Co., Ltd.', project: 'Hydrogen Peroxide Unit Assembly, Welding & Equipment Platform Erection (6 Main Process Units)', period: '2020.01 – 2020.07', location: "Huai'an, Jiangsu", category: 'Petrochemical EPC & Installation' },
   { no: 5, client: 'Jiangsu Weiming Petrochemical Co., Ltd.', project: '150,000 t/yr Cyclohexanone Project (4×5,000 m³ & 3×3,000 m³ Storage Tanks, Process Piping & Equipment)', period: '2018.01 – 2018.10', location: 'Rudong, Nantong', category: 'Petrochemical EPC & Installation' },

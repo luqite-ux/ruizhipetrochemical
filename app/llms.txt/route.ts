@@ -11,7 +11,8 @@ export function GET() {
 - Manufacturing Base: ${COMPANY.address} (22,000 m² / 33 mu)
 - Official Phone: ${COMPANY.phone}
 - Official Email: ${COMPANY.email}
-- Qualifications: Grade III General Contracting for Petrochemical Engineering Construction; Grade III General Contracting for Mechanical & Electrical Engineering Construction; Work Safety License (苏)JZ安许证字[2022]004596
+- China Official Website: ${COMPANY.domesticWebsite}
+- Qualifications: Production License of Special Equipment — Class D Stationary Pressure Vessel Manufacturing (TS2232K89-2030); GC2 Industrial Piping Installation (TS3832M95-2030); Grade II General Contracting for Petrochemical Engineering Construction & Grade II General Contracting for Electromechanical Engineering Construction (D232J05568); Work Safety License (JS-JZ-2022-004596); Business License (91321300MA2116FE3X)
 
 ## Primary Routes
 - /: Overview, 3D Vessel Cutaway Studio, Featured Equipment, Clients, Certificates

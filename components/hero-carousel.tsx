@@ -120,9 +120,9 @@ export function HeroCarousel({ locale = 'en' }: { locale?: Locale }) {
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-alabaster">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={slide.image}
+            src={'mobileImage' in slide && slide.mobileImage ? slide.mobileImage : slide.image}
             alt={slide.headline}
-            className={`h-full w-full object-cover ${slide.objectPos}`}
+            className={`h-full w-full object-cover ${'mobileImage' in slide && slide.mobileImage ? 'object-center' : slide.objectPos}`}
           />
         </div>
         <div className={`px-5 py-7 ${isLight ? 'bg-white text-ink' : 'bg-navy text-white'}`}>

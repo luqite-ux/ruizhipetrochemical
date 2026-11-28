@@ -76,8 +76,8 @@ export default async function AboutPage() {
           </p>
           <p className="mt-4 text-sm leading-relaxed text-body">
             {isZh
-              ? '公司持有石油化工工程施工总承包三级与机电工程施工总承包三级资质，拥有 33 亩（22,000 平方米）现代化制造基地，将重型装备制造与现场吊装总包有机结合，有效降低总包方与业主方的沟通成本并缩短项目建设周期。'
-              : 'Holding Grade III General Contracting qualifications for both Petrochemical Engineering Construction and Mechanical & Electrical Engineering Construction, we operate a 33-mu (22,000 m²) manufacturing base that unites equipment fabrication with heavy field installation — reducing coordination friction and project lead times for EPC contractors and plant owners.'}
+              ? '公司持有 D 级压力容器制造许可证、GC2 工业管道安装许可证、石油化工工程施工总承包贰级与机电工程施工总承包贰级资质，拥有 33 亩（22,000 平方米）现代化制造基地，将重型装备制造与现场吊装总包有机结合，有效降低总包方与业主方的沟通成本并缩短项目建设周期。'
+              : 'Holding Class D Pressure Vessel Manufacturing and GC2 Industrial Piping Installation licenses together with Grade II General Contracting qualifications for both Petrochemical Engineering Construction and Electromechanical Engineering Construction, we operate a 33-mu (22,000 m²) manufacturing base that unites equipment fabrication with heavy field installation — reducing coordination friction and project lead times for EPC contractors and plant owners.'}
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
@@ -92,6 +92,14 @@ export default async function AboutPage() {
             >
               {isZh ? '查看官方资质证书' : 'View Individual Certificates'}
             </Link>
+            <a
+              href="https://www.ruizhishihua.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-hairline bg-alabaster px-6 py-2.5 text-sm font-semibold text-navy hover:border-navy"
+            >
+              {isZh ? '访问国内官网' : 'China Official Site'}
+            </a>
           </div>
         </Reveal>
         <Reveal index={1}>

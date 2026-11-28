@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { Globe, Menu } from 'lucide-react'
+import { ExternalLink, Globe, Menu } from 'lucide-react'
 import { BrandLogo } from '@/components/brand-logo'
 import { Button } from '@/components/ui/button'
 import {
@@ -13,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
+import { COMPANY } from '@/lib/site'
 import { getLocaleFromPathname, getNavItems, stripLocale, withLocale, type Locale } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
 
@@ -110,6 +111,15 @@ export function SiteHeader({ initialLocale = 'en' }: { initialLocale?: Locale })
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
+          <a
+            href={COMPANY.domesticWebsite}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden items-center gap-1 whitespace-nowrap rounded-full border border-hairline bg-white px-3 py-1.5 text-xs font-medium text-navy transition-colors hover:border-navy hover:bg-alabaster xl:inline-flex"
+          >
+            <span>{locale === 'zh' ? '国内官网' : 'China Site'}</span>
+            <ExternalLink className="size-3" aria-hidden />
+          </a>
           <LanguageSwitcher locale={locale} basePathname={basePathname} />
           <Button
             asChild
@@ -168,6 +178,16 @@ export function SiteHeader({ initialLocale = 'en' }: { initialLocale?: Locale })
                     {locale === 'zh' ? '获取技术报价' : 'Request a Quote'}
                   </Link>
                 </Button>
+                <a
+                  href={COMPANY.domesticWebsite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-full border border-hairline bg-alabaster px-4 py-2.5 text-sm font-medium text-navy hover:border-navy"
+                >
+                  <span>{locale === 'zh' ? '访问国内官网' : 'Visit China Official Site'}</span>
+                  <ExternalLink className="size-3.5" aria-hidden />
+                </a>
               </nav>
             </SheetContent>
           </Sheet>

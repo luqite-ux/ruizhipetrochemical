@@ -87,7 +87,8 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     url: isZh ? `${SITE_URL}/zh` : SITE_URL,
     logo: R2_LOGO_URL,
     email: company.email,
-    telephone: company.phone,
+    telephone: ['+86-13401811628', '+86-19351737555'],
+    sameAs: [company.domesticWebsite],
     address: {
       '@type': 'PostalAddress',
       streetAddress: isZh ? '经济开发区龙山路19-8号' : 'No. 19-8 Longshan Road, Economic Development Zone',

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { ExternalLink, Globe, Mail, MapPin, Phone } from 'lucide-react'
 import { BrandLogo } from '@/components/brand-logo'
 import { getCategoriesNav, getCompany, getNavItems, withLocale, type Locale } from '@/lib/i18n'
 
@@ -55,14 +55,30 @@ export function SiteFooter({ locale = 'en' }: { locale?: Locale }) {
           <ul className="mt-4 space-y-4 text-sm text-body">
             <li className="flex gap-3">
               <Phone className="mt-0.5 size-4 shrink-0 text-navy" aria-hidden />
-              <a href={company.phoneHref} className="font-mono hover:text-navy">
-                {company.phone}
-              </a>
+              <div className="flex flex-col gap-1 font-mono">
+                {company.phones.map((p) => (
+                  <a key={p.href} href={p.href} className="hover:text-navy">
+                    {locale === 'zh' ? p.zhDisplay : p.display}
+                  </a>
+                ))}
+              </div>
             </li>
             <li className="flex gap-3">
               <Mail className="mt-0.5 size-4 shrink-0 text-navy" aria-hidden />
               <a href={`mailto:${company.email}`} className="whitespace-nowrap hover:text-navy">
                 {company.email}
+              </a>
+            </li>
+            <li className="flex gap-3">
+              <Globe className="mt-0.5 size-4 shrink-0 text-navy" aria-hidden />
+              <a
+                href={company.domesticWebsite}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 hover:text-navy"
+              >
+                <span>{locale === 'zh' ? '国内官网：www.ruizhishihua.com' : 'China Site: www.ruizhishihua.com'}</span>
+                <ExternalLink className="size-3 shrink-0" aria-hidden />
               </a>
             </li>
             <li className="flex gap-3">

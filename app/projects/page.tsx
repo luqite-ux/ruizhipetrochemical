@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   if (locale === 'zh') {
     return {
       title: '工程案例与合作客户',
-      description: '查看江苏锐志石化累计交付的 37 项以上石化设备制造与装置安装工程业绩，长期合作中石化、海右石化、富强新材料、安道麦安邦与金陵亨斯迈等企业。',
+      description: '查看江苏锐志石化累计交付的 37 项以上石化设备制造与装置安装工程业绩，长期合作中石化、海佑石化、富强新材料、安道麦安邦与金陵亨斯迈等企业。',
     }
   }
   return {
@@ -43,8 +43,8 @@ export default async function ProjectsPage() {
         title={isZh ? '交付工程案例与合作客户' : 'Delivered Projects & Cooperating Clients'}
         description={
           isZh
-            ? '从化工研究院定制中试反应器，到 101 米延迟焦化塔、386 吨环氧丙烷主反应器吊装及中石化 5,000 m³ 油库罐群。'
-            : 'From custom pilot reactors for chemical research institutes to 101 m delayed coking towers, 386-ton propylene oxide reactors, and 5,000 m³ Sinopec tank farms.'
+            ? '从化工研究院定制中试反应器，到 108 米延迟焦化塔、386 吨环氧丙烷主反应器吊装及中石化 5,000 m³ 油库罐群。'
+            : 'From custom pilot reactors for chemical research institutes to 108 m delayed coking towers, 386-ton propylene oxide reactors, and 5,000 m³ Sinopec tank farms.'
         }
       />
 

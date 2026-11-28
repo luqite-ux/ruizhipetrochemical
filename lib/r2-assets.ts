@@ -2,7 +2,7 @@
 export const R2_LOGO_URL = "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/brand/ruizhi-logo-654e5bc259.png"
 
 export const R2_BANNERS = [
-  "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/banners/banner-1-ca4ff83ea5.jpg",
+  "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/banners/banner-1-company-base-e66bc33391.jpg",
   "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/banners/banner-2-b43b5f49e8.jpg",
   "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/banners/banner-3-eb4d2ff7ef.jpg"
 ] as const
@@ -37,22 +37,54 @@ export const R2_FACILITY = [
 
 export const R2_CERTIFICATES = [
   {
+    "id": "cert-d-pressure-vessel",
+    "title": "Production License of Special Equipment (Class D Pressure Vessel)",
+    "code": "TS2232K89-2030",
+    "holder": "Jiangsu Ruizhi Petrochemical Engineering Co., Ltd.",
+    "scope": "Pressure Vessel Manufacturing — Fixed Pressure Vessels (Medium & Low Pressure Class D; design outsourced)",
+    "issuer": "Jiangsu Provincial Administration for Market Regulation",
+    "validity": "Valid until 2030-05-17",
+    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/certificates/d-pressure-vessel-license-72f9d754a4.jpg"
+  },
+  {
+    "id": "cert-gc2-piping",
+    "title": "Production License of Special Equipment (GC2 Industrial Piping)",
+    "code": "TS3832M95-2030",
+    "holder": "Jiangsu Ruizhi Petrochemical Engineering Co., Ltd.",
+    "scope": "Pressure-Bearing Special Equipment Installation, Repair & Alteration — Industrial Piping Installation (GC2)",
+    "issuer": "Jiangsu Provincial Administration for Market Regulation",
+    "validity": "Valid until 2030-05-11",
+    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/certificates/gc2-piping-license-18b3c1b99c.jpg"
+  },
+  {
     "id": "cert-work-safety-license",
     "title": "Work Safety License",
     "code": "JS-JZ-2022-004596",
     "holder": "Jiangsu Ruizhi Petrochemical Engineering Co., Ltd.",
     "scope": "Construction Engineering",
     "issuer": "Jiangsu Provincial Department of Housing and Urban-Rural Development",
-    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/certificates/work-safety-license-8d51748dea.jpg"
+    "validity": "2025-05-08 to 2028-05-23",
+    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/certificates/work-safety-license-2025-07db2994e9.jpg"
   },
   {
     "id": "cert-construction-qualification",
     "title": "Construction Enterprise Qualification Certificate",
-    "code": "D332462680",
+    "code": "D232J05568",
     "holder": "Jiangsu Ruizhi Petrochemical Engineering Co., Ltd.",
-    "scope": "Grade III General Contracting for Petrochemical Engineering Construction & Grade III General Contracting for Mechanical & Electrical Engineering Construction",
-    "issuer": "Huai'an Municipal Bureau of Housing and Urban-Rural Development",
-    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/certificates/construction-qualification-8c9f8651b6.jpg"
+    "scope": "Grade II General Contracting for Petrochemical Engineering Construction & Grade II General Contracting for Electromechanical Engineering Construction",
+    "issuer": "Jiangsu Provincial Department of Housing and Urban-Rural Development",
+    "validity": "Valid until 2031-04-09",
+    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/certificates/construction-qualification-grade2-8443fc7f8d.jpg"
+  },
+  {
+    "id": "cert-business-license",
+    "title": "Business License",
+    "code": "91321300MA2116FE3X",
+    "holder": "Jiangsu Ruizhi Petrochemical Engineering Co., Ltd.",
+    "scope": "Unified Social Credit Code Registration — Registered Capital RMB 15,000,000 (Established 2020-03-17)",
+    "issuer": "Xuyi County Administrative Approval Bureau",
+    "validity": "Registered 2025-03-06",
+    "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/certificates/business-license-eca0564239.png"
   }
 ] as const
 
@@ -69,7 +101,7 @@ export const R2_CASES = [
   },
   {
     "slug": "linyidongliang-gas-cooler",
-    "caption": "Shandong Linyi Dongliang Co., Ltd. — Custom Industrial Gas Cooling Units (2025)",
+    "caption": "Linyi Dongliang Material Technology Co., Ltd. — Custom Industrial Gas Cooling Units (2025)",
     "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/ruizhipetrochemical/cases/linyidongliang-gas-cooler-a344b38d57.jpg"
   },
   {

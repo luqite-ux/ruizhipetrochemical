@@ -12,13 +12,13 @@ export async function generateMetadata(): Promise<Metadata> {
   if (locale === 'zh') {
     return {
       title: '质量与资质认证',
-      description: '独立展示安全生产许可证与石油化工/机电施工总承包三级资质证书，以及直读光谱仪、无损检测与精密计量检测仪器。',
+      description: '独立展示 D 级压力容器制造许可证、GC2 工业管道安装许可证、安全生产许可证、石油化工/机电施工总承包贰级资质证书及营业执照，以及直读光谱仪、无损检测与精密计量检测仪器。',
     }
   }
   return {
     title: 'Quality & Certifications',
     description:
-      'Individual display of Work Safety License and Grade III Petrochemical & Electromechanical Construction Qualification Certificate, plus PMI spectrometer, NDT, and precision dimensional inspection equipment.',
+      'Individual display of Class D Pressure Vessel License, GC2 Industrial Piping License, Work Safety License, Grade II Petrochemical & Electromechanical Construction Qualification Certificate, and Business License, plus PMI spectrometer, NDT, and precision dimensional inspection equipment.',
   }
 }
 

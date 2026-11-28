@@ -11,11 +11,11 @@ export function CertificateShowcase({ locale = 'en' }: { locale?: Locale }) {
 
   return (
     <>
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {certs.map((cert) => (
           <article
             key={cert.id}
-            className="flex flex-col overflow-hidden rounded-2xl border border-hairline bg-white shadow-xs transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
+            className="flex h-full flex-col overflow-hidden rounded-2xl border border-hairline bg-white shadow-xs transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
           >
             <button
               type="button"
@@ -35,8 +35,8 @@ export function CertificateShowcase({ locale = 'en' }: { locale?: Locale }) {
             </button>
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-wider text-crimson">
-                <Award className="size-4" />
-                <span>{cert.code}</span>
+                <Award className="size-4 shrink-0" />
+                <span className="break-all">{cert.code}</span>
               </div>
               <h3 className="mt-2 text-lg font-semibold text-ink">{cert.title}</h3>
               <dl className="mt-4 space-y-2 border-t border-hairline pt-4 text-sm">
@@ -58,6 +58,14 @@ export function CertificateShowcase({ locale = 'en' }: { locale?: Locale }) {
                   </dt>
                   <dd className="text-body">{cert.issuer}</dd>
                 </div>
+                {'validity' in cert && cert.validity ? (
+                  <div>
+                    <dt className="font-mono text-[11px] uppercase tracking-wider text-body">
+                      {isZh ? '有效期 / 登记日期' : 'Validity'}
+                    </dt>
+                    <dd className="font-mono text-xs text-ink">{cert.validity}</dd>
+                  </div>
+                ) : null}
               </dl>
             </div>
           </article>

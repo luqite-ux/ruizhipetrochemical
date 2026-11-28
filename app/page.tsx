@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Building2, CheckCircle2, Mail, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, Building2, CheckCircle2, ExternalLink, Globe, Mail, MapPin, Phone } from 'lucide-react'
 import { HeroCarousel } from '@/components/hero-carousel'
 import { ThreeVesselStudio } from '@/components/three-vessel-studio'
 import { CertificateShowcase } from '@/components/certificate-showcase'
@@ -322,11 +322,11 @@ export default async function HomePage() {
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <SectionHeading
               eyebrow={isZh ? '法定资质认证' : 'Official Credentials'}
-              title={isZh ? '工程总承包与安全生产资质证书' : 'Individual Engineering & Safety Qualifications'}
+              title={isZh ? '特种设备许可、工程总承包与法定资质证书' : 'Special Equipment, Engineering & Statutory Certifications'}
               description={
                 isZh
-                  ? '逐一清晰展示每项法定工程总承包与安全生产许可原件，便于采购方与总包方直接核验。'
-                  : 'Each statutory contracting and work-safety qualification certificate is presented individually for direct procurement due diligence.'
+                  ? '逐一清晰展示 D 级压力容器制造、GC2 工业管道安装、施工总承包贰级、安全生产许可及营业执照原件，便于采购方与总包方直接核验。'
+                  : 'Each statutory credential — Class D pressure vessel manufacturing, GC2 industrial piping installation, Grade II EPC qualifications, work safety license, and business license — is presented individually for procurement due diligence.'
               }
             />
             <Link
@@ -464,9 +464,13 @@ export default async function HomePage() {
                   <p className="font-mono text-[11px] uppercase tracking-wider text-body">
                     {isZh ? '联系电话' : 'Official Phone'}
                   </p>
-                  <a href={company.phoneHref} className="font-mono text-sm font-semibold text-ink hover:text-navy">
-                    {company.phone}
-                  </a>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-sm font-semibold text-ink">
+                    {company.phones.map((p) => (
+                      <a key={p.href} href={p.href} className="hover:text-navy">
+                        {isZh ? p.zhDisplay : p.display}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -477,6 +481,23 @@ export default async function HomePage() {
                   </p>
                   <a href={`mailto:${company.email}`} className="text-[13px] font-semibold whitespace-nowrap text-ink hover:text-navy sm:text-sm">
                     {company.email}
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Globe className="mt-0.5 size-4 shrink-0 text-navy" />
+                <div className="min-w-0">
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-body">
+                    {isZh ? '国内官网' : 'China Official Website'}
+                  </p>
+                  <a
+                    href={company.domesticWebsite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-navy hover:underline"
+                  >
+                    <span>{company.domesticWebsite}</span>
+                    <ExternalLink className="size-3.5 shrink-0" aria-hidden />
                   </a>
                 </div>
               </div>

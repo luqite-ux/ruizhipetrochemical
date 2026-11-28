@@ -1,7 +1,7 @@
 import { CAPABILITIES, COMPANY, FAQS, METRICS, NAV_ITEMS } from '@/lib/site'
 import { CATEGORIES } from '@/lib/catalog'
 import { FABRICATION_PROJECTS, INSTALLATION_TRACK_RECORD, MAJOR_CLIENTS } from '@/lib/projects-data'
-import { R2_BANNERS, R2_CERTIFICATES } from '@/lib/r2-assets'
+import { R2_BANNERS, R2_CERTIFICATES, R2_FACILITY } from '@/lib/r2-assets'
 
 export type Locale = 'en' | 'zh'
 
@@ -108,7 +108,7 @@ export function getFaqs(locale: Locale) {
     },
     {
       q: '是否提供现场吊装与安装工程服务？',
-      a: '提供。公司具备石油化工工程施工总承包三级与机电工程施工总承包三级资质，可由自有工程团队承接重型吊装、设备就位、工艺配管及现场调试配合。',
+      a: '提供。公司持有石油化工工程施工总承包贰级、机电工程施工总承包贰级资质，以及 D 级压力容器制造与 GC2 工业管道安装特种设备生产许可证，可由自有工程团队承接重型吊装、设备就位、工艺配管及现场调试配合。',
     },
   ] as const
 }
@@ -131,6 +131,7 @@ export function getHeroSlides(locale: Locale) {
       {
         id: 'banner-1',
         image: R2_BANNERS[0],
+        mobileImage: R2_FACILITY[1].url,
         eyebrow: 'Xuyi 22,000 m² Source Factory',
         headline: 'Focused on Pressure Vessels · Leading Petrochemical Manufacturing',
         description:
@@ -184,6 +185,7 @@ export function getHeroSlides(locale: Locale) {
     {
       id: 'banner-1',
       image: R2_BANNERS[0],
+      mobileImage: R2_FACILITY[1].url,
       eyebrow: '盱眙 22,000 m² 源头制造基地',
       headline: '聚焦压力容器·引领石化制造',
       description:
@@ -222,7 +224,7 @@ export function getHeroSlides(locale: Locale) {
       eyebrow: '37+ 项大型装备与项目交付实绩',
       headline: '广泛服务于国内大型炼化、精细化工与环保能源项目',
       description:
-        '长期合作中石化江苏石油、山东海右石化、江苏富强新材料、安道麦安邦、大唐环保及南京金陵亨斯迈等知名企业。',
+        '长期合作中石化江苏石油、山东海佑石化、江苏富强新材料、安道麦安邦、大唐环保及南京金陵亨斯迈等知名企业。',
       ctaLabel: '查看工程案例',
       ctaHref: '/projects',
       secondaryLabel: '联系技术团队',
@@ -249,7 +251,7 @@ export function getFacilityCaption(slug: string, fallback: string, locale: Local
 const CASES_CAPTIONS_ZH: Record<string, string> = {
   'gansu-loop-reactor-pilot': '甘肃省化工研究院 — 定制管式环流反应器中试与放大装置（2025）',
   'gansu-chlorination-tower': '甘肃省化工研究院 — 多塔撬装氯化反应中试装置（2025）',
-  'linyidongliang-gas-cooler': '山东临沂东亮有限公司 — 定制工业气体冷却器成套设备（2025）',
+  'linyidongliang-gas-cooler': '临沂动量材料科技有限公司 — 定制工业气体冷却器成套设备（2025）',
   'sinopec-qihu-oil-depot': '中石化江苏石油分公司 — 淮安齐湖油库储罐群工程（8×5000m³、4×3000m³、2×1000m³）',
   'fuqiang-po-main-reactor': '江苏富强新材料 — 10 万吨/年环氧丙烷主反应装置（含 3×386 吨主反应器吊装）',
   'huaihe-coal-gasification': '江苏淮河化工 — 合成氨 240 t/d 粉煤气化成套装置',
@@ -310,24 +312,55 @@ export function getCertificates(locale: Locale) {
   return [
     {
       ...R2_CERTIFICATES[0],
-      title: '安全生产许可证',
+      title: '特种设备生产许可证（压力容器制造 D 级）',
+      code: 'TS2232K89-2030',
       holder: '江苏锐志石化工程有限公司',
-      scope: '建筑施工',
-      issuer: '江苏省住房和城乡建设厅',
+      scope: '压力容器制造 — 固定式压力容器（中、低压容器（D））（压力容器设计外委）',
+      issuer: '江苏省市场监督管理局',
+      validity: '有效期至 2030年05月17日',
     },
     {
       ...R2_CERTIFICATES[1],
-      title: '建筑业企业资质证书',
+      title: '特种设备生产许可证（GC2 工业管道安装）',
+      code: 'TS3832M95-2030',
       holder: '江苏锐志石化工程有限公司',
-      scope: '石油化工工程施工总承包三级、机电工程施工总承包三级',
-      issuer: '淮安市住房和城乡建设局',
+      scope: '承压类特种设备安装、修理、改造 — 工业管道安装（GC2）',
+      issuer: '江苏省市场监督管理局',
+      validity: '有效期至 2030年05月11日',
+    },
+    {
+      ...R2_CERTIFICATES[2],
+      title: '安全生产许可证',
+      code: '（苏）JZ安许证字[2022]004596',
+      holder: '江苏锐志石化工程有限公司',
+      scope: '建筑施工',
+      issuer: '江苏省住房和城乡建设厅',
+      validity: '2025年05月08日 至 2028年05月23日',
+    },
+    {
+      ...R2_CERTIFICATES[3],
+      title: '建筑业企业资质证书',
+      code: 'D232J05568',
+      holder: '江苏锐志石化工程有限公司',
+      scope: '石油化工工程施工总承包贰级、机电工程施工总承包贰级',
+      issuer: '江苏省住房和城乡建设厅',
+      validity: '有效期至 2031年04月09日',
+    },
+    {
+      ...R2_CERTIFICATES[4],
+      title: '营业执照',
+      code: '91321300MA2116FE3X',
+      holder: '江苏锐志石化工程有限公司',
+      scope: '统一社会信用代码登记 — 注册资本 1500 万元整（成立日期：2020年03月17日）',
+      issuer: '盱眙县行政审批局',
+      validity: '登记日期 2025年03月06日',
     },
   ]
 }
 
 const CLIENTS_ZH = [
   { name: '中国石化江苏石油分公司', sector: '油气储运与油库' },
-  { name: '山东海右石化集团', sector: '石油炼制' },
+  { name: '山东海佑石化集团', sector: '石油炼制' },
   { name: '江苏富强新材料有限公司', sector: '环氧丙烷与双氧水' },
   { name: '安道麦安邦（江苏）有限公司', sector: '农化与精细化工' },
   { name: '大唐（江苏）环保装备有限公司', sector: '脱硝催化剂系统' },
@@ -335,14 +368,14 @@ const CLIENTS_ZH = [
   { name: '江苏瀚康电子材料有限公司', sector: '锂电池电子材料' },
   { name: '江苏淮河化工有限公司', sector: '合成氨与硝基化工' },
   { name: '甘肃省化工研究院', sector: '中试反应器与塔器' },
-  { name: '山东临沂东亮有限公司', sector: '工业气体冷却' },
+  { name: '临沂动量材料科技有限公司', sector: '工业气体冷却' },
   { name: '山东赫达集团股份有限公司', sector: '高分子材料与环保' },
-  { name: '江苏威明石化有限公司', sector: '环己酮与大型罐区' },
+  { name: '江苏威名石化有限公司', sector: '环己酮与大型罐区' },
   { name: '中信元钧环保科技', sector: '环保新材料' },
   { name: '湖南鲁丽木业有限公司', sector: '工业成套生产线' },
   { name: '南京环保产业创新中心', sector: '工艺管道与储罐' },
   { name: '马鞍山金星化工集团', sector: '钛白粉化工' },
-  { name: '华能淮安电厂', sector: '能源与电力' },
+  { name: '江苏淮安华能电厂', sector: '能源与电力' },
   { name: '江苏福斯特化工有限公司', sector: '精细化工' },
 ] as const
 
@@ -353,7 +386,7 @@ export function getMajorClients(locale: Locale) {
 const FAB_PROJECTS_ZH = [
   { no: 1, client: '甘肃省化工研究院', project: '定制管式环流反应器（实验室小试及中试放大撬块）', period: '2025.08 – 2025.09', location: '甘肃兰州', category: '非标设备制造' },
   { no: 2, client: '甘肃省化工研究院', project: '多塔氯化反应中试装置制造', period: '2025.10 – 至今', location: '甘肃兰州', category: '非标设备制造' },
-  { no: 3, client: '山东临沂东亮有限公司', project: '定制工业气体冷却换热器批次制造', period: '2025.12', location: '山东临沂', category: '非标设备制造' },
+  { no: 3, client: '临沂动量材料科技有限公司', project: '定制工业气体冷却换热器批次制造', period: '2025.12', location: '山东临沂', category: '非标设备制造' },
   { no: 4, client: '江苏瀚康电子材料有限公司', project: '59,600 吨/年锂电池添加剂成套装置（设备、管道、钢结构、电气仪表）', period: '2023.04 – 2024.11', location: '淮安盐化新材料园区', category: '石化安装总包' },
   { no: 5, client: '大唐（江苏）环保装备有限公司', project: '10,000 m³/年蜂窝脱硝催化剂生产线设备安装', period: '2023.05 – 2023.11', location: '江苏盱眙', category: '环保与能源工程' },
   { no: 6, client: '南京环保产业创新中心', project: '连云港项目储罐、工艺管道、阀门及钢结构制造安装', period: '2023.12 – 2024.02', location: '江苏连云港', category: '环保与能源工程' },
@@ -365,10 +398,10 @@ export function getFabricationProjects(locale: Locale) {
 
 const INSTALL_RECORDS_ZH = [
   { no: 1, client: '中国石化江苏石油分公司', project: '淮安齐湖油库工程（8×5000m³、4×3000m³、2×1000m³ 储罐、工艺管道、消防、防腐及电仪）', period: '2013.04 – 2014.11', location: '淮安清浦' },
-  { no: 2, client: '山东海右石化集团', project: '100 万吨/年延迟焦化联合装置钢结构、101 米焦化塔及管廊工程', period: '2018.05 – 2019.01', location: '山东日照' },
+  { no: 2, client: '山东海佑石化集团', project: '100 万吨/年延迟焦化联合装置钢结构、108 米焦化塔及管廊工程', period: '2018.05 – 2019.01', location: '山东日照' },
   { no: 3, client: '江苏富强新材料有限公司', project: '10 万吨/年环氧丙烷装置（含 3×386 吨主反应器吊装、钢结构及防腐）', period: '2019.03 – 2019.10', location: '江苏淮安' },
   { no: 4, client: '江苏富强新材料有限公司', project: '双氧水装置 6 套主设备组焊与设备操作平台安装', period: '2020.01 – 2020.07', location: '江苏淮安' },
-  { no: 5, client: '江苏威明石化有限公司', project: '15 万吨/年环己酮项目（4×5000m³、3×3000m³ 储罐、工艺管道及设备安装）', period: '2018.01 – 2018.10', location: '南通如东' },
+  { no: 5, client: '江苏威名石化有限公司', project: '15 万吨/年环己酮项目（4×5000m³、3×3000m³ 储罐、工艺管道及设备安装）', period: '2018.01 – 2018.10', location: '南通如东' },
   { no: 6, client: '安道麦安邦（江苏）有限公司', project: '1.3 万吨/年乙烯利搬迁升级项目 — 工艺及伴热外管廊', period: '2021.03 – 2021.06', location: '江苏淮安' },
   { no: 7, client: '南京金陵亨斯迈新材料有限公司', project: '环氧丙烷项目 — 污水处理厌氧反应罐及内件制造安装', period: '2016.04 – 2017.03', location: '江苏南京' },
   { no: 8, client: '江苏淮河化工有限公司', project: '合成氨节能改造 — 240 t/d 粉煤气化成套装置安装', period: '2019.03 – 2020.10', location: '淮安盱眙' },
