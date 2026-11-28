@@ -26,7 +26,7 @@ export function HeroCarousel({ locale = 'en' }: { locale?: Locale }) {
   return (
     <section
       id="hero-carousel"
-      aria-label={locale === 'zh' ? '核心工程能力展示' : 'Featured engineering capabilities'}
+      aria-label={locale === 'zh' ? '核心制造与装备能力展示' : 'Featured manufacturing capabilities'}
       className="relative border-b border-hairline bg-white"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -61,13 +61,33 @@ export function HeroCarousel({ locale = 'en' }: { locale?: Locale }) {
             >
               {slide.headline}
             </h1>
-            <p
-              className={`mt-4 text-base leading-relaxed ${
-                isLight ? 'text-body' : 'text-slate-100'
-              }`}
-            >
-              {slide.description}
-            </p>
+            {'highlights' in slide && slide.highlights?.length ? (
+              <ul
+                className={`mt-4 space-y-2 text-base leading-relaxed ${
+                  isLight ? 'text-body' : 'text-slate-100'
+                }`}
+              >
+                {slide.highlights.map((item) => (
+                  <li key={item} className="flex items-start gap-2.5">
+                    <span
+                      aria-hidden
+                      className={`mt-2.5 size-1.5 shrink-0 rounded-full ${
+                        isLight ? 'bg-crimson' : 'bg-red-300'
+                      }`}
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p
+                className={`mt-4 text-base leading-relaxed ${
+                  isLight ? 'text-body' : 'text-slate-100'
+                }`}
+              >
+                {slide.description}
+              </p>
+            )}
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Link
                 href={withLocale(slide.ctaHref, locale)}
@@ -112,9 +132,25 @@ export function HeroCarousel({ locale = 'en' }: { locale?: Locale }) {
           <h1 className={`mt-2 text-2xl font-semibold leading-snug ${isLight ? 'text-ink' : 'text-white'}`}>
             {slide.headline}
           </h1>
-          <p className={`mt-3 text-sm leading-relaxed ${isLight ? 'text-body' : 'text-slate-200'}`}>
-            {slide.description}
-          </p>
+          {'highlights' in slide && slide.highlights?.length ? (
+            <ul className={`mt-3 space-y-1.5 text-sm leading-relaxed ${isLight ? 'text-body' : 'text-slate-200'}`}>
+              {slide.highlights.map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span
+                    aria-hidden
+                    className={`mt-2 size-1.5 shrink-0 rounded-full ${
+                      isLight ? 'bg-crimson' : 'bg-red-300'
+                    }`}
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className={`mt-3 text-sm leading-relaxed ${isLight ? 'text-body' : 'text-slate-200'}`}>
+              {slide.description}
+            </p>
+          )}
           <div className="mt-5 flex flex-wrap gap-2.5">
             <Link
               href={withLocale(slide.ctaHref, locale)}

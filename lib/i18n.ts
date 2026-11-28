@@ -34,7 +34,7 @@ export function getCompany(locale: Locale) {
     shortName: '锐志石化',
     address: '中国江苏省淮安市盱眙县经济开发区龙山路19-8号',
     summary:
-      '江苏锐志石化工程有限公司是集石油化工压力容器、储罐、换热器、冷凝器、精馏塔及反应釜设计、制造与现场安装于一体的源头工厂。公司坐落于江苏盱眙经济开发区，建有 22,000 平方米（33 亩）现代化重型制造基地，配备 50/10 吨桥式起重机重型车间。',
+      '江苏锐志石化工程有限公司是一家专注于压力容器与石化设备设计制造，并以此为内核驱动石油化工、机电工程总承包的综合性服务商。公司坐落于江苏盱眙经济开发区，建有 22,000 平方米（33 亩）现代化重型制造基地，配备 50/10 吨桥式起重机重型车间。',
   }
 }
 
@@ -132,9 +132,14 @@ export function getHeroSlides(locale: Locale) {
         id: 'banner-1',
         image: R2_BANNERS[0],
         eyebrow: 'Xuyi 22,000 m² Source Factory',
-        headline: 'Integrated Petrochemical Equipment Fabrication & Plant Engineering',
+        headline: 'Focused on Pressure Vessels · Leading Petrochemical Manufacturing',
         description:
-          '16+ years integrating design, heavy fabrication, and site installation for pressure vessels, storage tanks, heat exchangers, and distillation columns.',
+          'Dedicated to non-standard design and precision manufacturing of pressure vessels and petrochemical equipment; professional installation and commissioning of equipment, piping, electrical and instrumentation systems; full EPC general contracting and project management for petrochemical and electromechanical projects.',
+        highlights: [
+          'Non-standard design and precision manufacturing of pressure vessels and petrochemical equipment;',
+          'Professional installation and commissioning of equipment, piping, electrical and instrumentation systems;',
+          'Full EPC general contracting and project management for petrochemical and electromechanical projects.',
+        ],
         ctaLabel: 'Explore Equipment Catalog',
         ctaHref: '/products',
         secondaryLabel: 'Request Quotation',
@@ -161,13 +166,13 @@ export function getHeroSlides(locale: Locale) {
       {
         id: 'banner-3',
         image: R2_BANNERS[2],
-        eyebrow: '37+ Delivered Engineering Projects',
+        eyebrow: '37+ Delivered Equipment & Plant Projects',
         headline: 'Proven Across Major Refining, Chemical & Energy Complexes',
         description:
           'Trusted by Sinopec Jiangsu, Shandong Haiyou, Jiangsu Fuqiang, ADAMA Anpon, Datang Environmental, and Nanjing Jinling Huntsman.',
         ctaLabel: 'View Project Case Studies',
         ctaHref: '/projects',
-        secondaryLabel: 'Contact Engineering Team',
+        secondaryLabel: 'Contact Technical Team',
         secondaryHref: '/contact#inquiry-rfq',
         side: 'left' as const,
         tone: 'light' as const,
@@ -180,9 +185,14 @@ export function getHeroSlides(locale: Locale) {
       id: 'banner-1',
       image: R2_BANNERS[0],
       eyebrow: '盱眙 22,000 m² 源头制造基地',
-      headline: '石化装备制造与装置工程一体化服务商',
+      headline: '聚焦压力容器·引领石化制造',
       description:
-        '深耕行业 16 余年，集压力容器、大型储罐、换热器与精馏塔的设计、重型制造及现场总包安装于一体。',
+        '重点深耕压力容器、石化设备的非标设计与精密制造；专业覆盖设备管道、电气仪表的安装与调试；全面承接石油化工、机电工程的总承包与项目管理。',
+      highlights: [
+        '重点深耕压力容器、石化设备的非标设计与精密制造；',
+        '专业覆盖设备管道、电气仪表的安装与调试；',
+        '全面承接石油化工、机电工程的总承包与项目管理。',
+      ],
       ctaLabel: '浏览产品中心',
       ctaHref: '/products',
       secondaryLabel: '获取技术报价',
@@ -209,13 +219,13 @@ export function getHeroSlides(locale: Locale) {
     {
       id: 'banner-3',
       image: R2_BANNERS[2],
-      eyebrow: '37+ 项大型工程交付实绩',
+      eyebrow: '37+ 项大型装备与项目交付实绩',
       headline: '广泛服务于国内大型炼化、精细化工与环保能源项目',
       description:
         '长期合作中石化江苏石油、山东海右石化、江苏富强新材料、安道麦安邦、大唐环保及南京金陵亨斯迈等知名企业。',
       ctaLabel: '查看工程案例',
       ctaHref: '/projects',
-      secondaryLabel: '联系工程技术团队',
+      secondaryLabel: '联系技术团队',
       secondaryHref: '/contact#inquiry-rfq',
       side: 'left' as const,
       tone: 'light' as const,

@@ -412,12 +412,12 @@ export default async function HomePage() {
       <section id="buyer-faq" className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow={isZh ? '采购与工程指南' : 'Procurement Guide'}
-            title={isZh ? '工程定制与采购常见问题' : 'Frequently Asked Engineering & Ordering Questions'}
+            eyebrow={isZh ? '采购与定制指南' : 'Procurement Guide'}
+            title={isZh ? '装备定制与采购常见问题' : 'Frequently Asked Manufacturing & Ordering Questions'}
             description={
               isZh
                 ? '涵盖起订量、OEM/ODM 按图定制、常规交期、设计寿命、检测文件及现场安装等核心采购问题。'
-                : 'Key ordering terms covering MOQ, OEM/ODM custom engineering, lead times, design life, and inspection documentation.'
+                : 'Key ordering terms covering MOQ, OEM/ODM custom manufacturing, lead times, design life, and inspection documentation.'
             }
           />
         </Reveal>
@@ -450,7 +450,7 @@ export default async function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1fr_1.15fr] lg:items-start">
           <Reveal className="min-w-0">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-crimson">
-              {isZh ? '工程技术直联' : 'Direct Engineering Desk'}
+              {isZh ? '制造技术直联' : 'Direct Technical Desk'}
             </p>
             <h2 className="mt-2 text-3xl font-semibold text-ink sm:text-4xl">
               {isZh ? '获取定制技术方案与报价' : 'Request a Technical Quotation'}
@@ -473,7 +473,7 @@ export default async function HomePage() {
                 <Mail className="mt-0.5 size-4 shrink-0 text-navy" />
                 <div className="min-w-0">
                   <p className="font-mono text-[11px] uppercase tracking-wider text-body">
-                    {isZh ? '工程邮箱' : 'Engineering Email'}
+                    {isZh ? '业务邮箱' : 'Official Email'}
                   </p>
                   <a href={`mailto:${company.email}`} className="text-[13px] font-semibold whitespace-nowrap text-ink hover:text-navy sm:text-sm">
                     {company.email}

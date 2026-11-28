@@ -4,7 +4,7 @@ import { COMPANY } from '@/lib/site'
 export function GET() {
   const body = `# ${COMPANY.name}
 
-> Direct source factory integrating design, fabrication, and site installation of petrochemical pressure vessels, storage tanks, heat exchangers, condensers, distillation columns, and chemical reactors.
+> Comprehensive service provider focused on the design and manufacturing of pressure vessels and petrochemical equipment, driving petrochemical and electromechanical EPC general contracting from our 22,000 m² Xuyi base.
 
 ## Key Facts
 - Legal Name: ${COMPANY.name}
@@ -19,7 +19,7 @@ export function GET() {
 - /projects: 37+ Delivered Engineering Projects & Major Cooperating Clients
 - /manufacturing: Xuyi 22,000 m² Plant & 22 Workshop Fabrication Machines
 - /quality: Individual Qualification Certificates & NDT / PMI Inspection Lab
-- /about: 16-Year History & Four-Department Engineering Standards
+- /about: Manufacturing-Core Positioning & Four-Department Standards
 - /news: Company Announcements & Technical Updates
 - /contact: Direct Engineering Quotation (RFQ)
 `

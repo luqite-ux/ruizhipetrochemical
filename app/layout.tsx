@@ -28,8 +28,8 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `%s | ${company.shortName}`,
     },
     description: isZh
-      ? '江苏锐志石化工程有限公司专注石油化工压力容器、大型储罐、管壳式换热器、冷凝器、精馏塔与反应釜设计、制造与现场安装，坐落江苏盱眙 22,000 m² 现代化制造基地。'
-      : 'Source factory for petrochemical pressure vessels, storage tanks, heat exchangers, condensers, distillation columns and reactors. Design, fabrication and site installation from a 22,000 m² base in Xuyi, Jiangsu.',
+      ? '专注于压力容器与石化设备设计制造，并以此为内核驱动石油化工、机电工程总承包的综合性服务商，坐落江苏盱眙 22,000 m² 现代化制造基地。'
+      : 'Comprehensive service provider focused on pressure vessel and petrochemical equipment design and manufacturing, driving petrochemical and electromechanical EPC general contracting from a 22,000 m² base in Xuyi, Jiangsu.',
     applicationName: company.shortName,
     alternates: {
       canonical: isZh ? zhUrl : enUrl,

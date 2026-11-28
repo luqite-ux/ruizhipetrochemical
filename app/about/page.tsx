@@ -4,7 +4,6 @@ import { PageHero } from '@/components/page-hero'
 import { Reveal } from '@/components/reveal'
 import { SectionHeading } from '@/components/section-heading'
 import {
-  getCompany,
   getDepartmentValues,
   getFacilityCaption,
   getMetrics,
@@ -18,20 +17,20 @@ export async function generateMetadata(): Promise<Metadata> {
   if (locale === 'zh') {
     return {
       title: '关于我们',
-      description: '江苏锐志石化工程有限公司——16 年石化、机电与电力工程经验，坐落江苏盱眙 22,000 m² 现代化制造基地。',
+      description:
+        '一家专注于压力容器与石化设备设计制造，并以此为内核驱动石油化工、机电工程总承包的综合性服务商，坐落江苏盱眙 22,000 m² 现代化制造基地。',
     }
   }
   return {
     title: 'About Us',
     description:
-      'Jiangsu Ruizhi Petrochemical Engineering Co., Ltd. — 16 years of petrochemical, electromechanical, and power engineering experience with a 22,000 m² Xuyi manufacturing base.',
+      'A comprehensive service provider focused on pressure vessel and petrochemical equipment design and manufacturing, driving petrochemical and electromechanical EPC general contracting from our 22,000 m² Xuyi base.',
   }
 }
 
 export default async function AboutPage() {
   const locale = await getServerLocale()
   const isZh = locale === 'zh'
-  const company = getCompany(locale)
   const metrics = getMetrics(locale)
   const deptValues = getDepartmentValues(locale)
   const rdCaption = getFacilityCaption(R2_FACILITY[0].slug, R2_FACILITY[0].caption, locale)
@@ -40,8 +39,12 @@ export default async function AboutPage() {
     <div className="bg-white">
       <PageHero
         eyebrow={isZh ? '关于锐志石化' : 'About Ruizhi Petrochemical'}
-        title={isZh ? '16 年深耕石化装备设计、制造与工程安装一体化' : '16 Years Integrating Petrochemical Design, Fabrication & Installation'}
-        description={company.summary}
+        title={isZh ? '关于我们' : 'About Us'}
+        description={
+          isZh
+            ? '一家专注于压力容器与石化设备设计制造，并以此为内核驱动石油化工、机电工程总承包的综合性服务商'
+            : 'A comprehensive service provider focused on the design and manufacturing of pressure vessels and petrochemical equipment, driving petrochemical and electromechanical EPC general contracting from this manufacturing core.'
+        }
       />
 
       {/* Metrics */}
@@ -64,12 +67,12 @@ export default async function AboutPage() {
             {isZh ? '源头制造工厂' : 'Direct Source Factory'}
           </p>
           <h2 className="mt-2 text-3xl font-semibold text-ink">
-            {isZh ? '从非标压力容器定制到大型装置总包安装' : 'From Custom Pressure Vessels to Turnkey Plant Erection'}
+            {isZh ? '以压力容器与石化设备设计制造为内核，延伸总包交付' : 'Anchored in Pressure Vessel Fabrication, Extended to Turnkey Delivery'}
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-body">
             {isZh
-              ? '江苏锐志石化工程有限公司坐落于江苏省淮安市盱眙县经济开发区，是一家集研发、制造与工程施工于一体的综合性工业工程企业，长期服务于石油化工、精细化工、能源电力、冶金及环保水处理等领域。'
-              : "Headquartered in the Economic Development Zone of Xuyi County, Huai'an, Jiangsu Province, Jiangsu Ruizhi Petrochemical Engineering Co., Ltd. is a comprehensive industrial engineering enterprise serving petrochemical, fine chemical, energy, power, metallurgical, and environmental protection sectors."}
+              ? '江苏锐志石化工程有限公司坐落于江苏省淮安市盱眙县经济开发区，是一家专注于压力容器与石化设备设计制造，并以此为内核驱动石油化工、机电工程总承包的综合性服务商，长期服务于石油化工、精细化工、能源、冶金及环保水处理等领域。'
+              : "Headquartered in the Economic Development Zone of Xuyi County, Huai'an, Jiangsu Province, Jiangsu Ruizhi Petrochemical Engineering Co., Ltd. is a comprehensive service provider focused on pressure vessel and petrochemical equipment design and manufacturing, driving petrochemical and electromechanical EPC general contracting across petrochemical, fine chemical, energy, metallurgical, and environmental protection sectors."}
           </p>
           <p className="mt-4 text-sm leading-relaxed text-body">
             {isZh
@@ -109,7 +112,7 @@ export default async function AboutPage() {
           <Reveal>
             <SectionHeading
               eyebrow={isZh ? '企业文化与管理体系' : 'Corporate Culture'}
-              title={isZh ? '四大核心部门工程执行标准' : 'Four-Department Engineering Standards'}
+              title={isZh ? '四大核心部门制造与执行标准' : 'Four-Department Manufacturing & Execution Standards'}
             />
           </Reveal>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

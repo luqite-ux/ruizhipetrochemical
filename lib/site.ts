@@ -10,7 +10,7 @@ export const COMPANY = {
   address:
     "No. 19-8 Longshan Road, Economic Development Zone, Xuyi County, Huai'an, Jiangsu, China",
   summary:
-    'Jiangsu Ruizhi Petrochemical Engineering Co., Ltd. is a direct source factory that integrates design, fabrication and site installation of petrochemical pressure vessels, storage tanks, heat exchangers, condensers, distillation columns and reactors. Our 22,000 m² (33 mu) base in Xuyi, Jiangsu, is equipped for heavy fabrication with a 50/10 t overhead bridge crane workshop.',
+    'Jiangsu Ruizhi Petrochemical Engineering Co., Ltd. is a comprehensive service provider focused on the design and manufacturing of pressure vessels and petrochemical equipment, driving petrochemical and electromechanical EPC general contracting from this manufacturing core. Our 22,000 m² (33 mu) base in Xuyi, Jiangsu, is equipped for heavy fabrication with a 50/10 t overhead bridge crane workshop.',
 }
 
 export const NAV_ITEMS = [
